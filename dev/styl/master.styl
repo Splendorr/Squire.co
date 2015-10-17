@@ -18,6 +18,7 @@ html
   // width: 100%
   background-color #3333d3 !important
   font-family 'nb_international_mono-webfont', monospace;
+  font-kerning: normal;
   
 
   // margin:0;
@@ -51,29 +52,34 @@ body
   // box-sizing:border-box
   text-align center
   font-family 'nb_international_mono-webfont', monospace;
+  font-kerning: normal;
   
   padding-bottom 4em
   
 a
   &:link 
     // color: link
+    color: #FFF
     // text-decoration none
     background-image: none
     // border-bottom: 1px solid link;
     
   &:hover 
     // color: linkhover
+    color: #FFF
     background-image: none
     // border-bottom: 1px solid linkhover;
   &:visited 
     // color: linkvisited
+    color: #FFF
   &:active 
     // color: linkactive
+    color: #FFF
     
 #squirelogo
   center(30em, 5%)
   margin-top 6em
-  margin-bottom 2em 
+  margin-bottom 1em 
   
   +below(900px)
     margin-top 6em
@@ -106,6 +112,7 @@ img, svg
   
 p
   font-family 'nb_international_mono-webfont', monospace;
+  font-kerning: normal;
   // text-align center 
     
   line-height 1.3em
@@ -134,11 +141,15 @@ p
   
 p.tagline
   font-size 1.3em
-  padding-bottom 1em
+  padding-bottom 2em
   // padding-bottom 1em
     
 .letterframe
   center(60em)
+  text-align left
+  
+.faqframe
+  center(50em)
   text-align left
   
 #letterlogo
@@ -181,6 +192,25 @@ p.tagline
     
 p.openletter
   font-size 1.4em
+  
+p.faqtitle
+  font-size 3em 
+  
+p.faqQuestion
+  font-size 1.4em 
+  margin-bottom 0
+  padding-bottom 0
+  
+.faqAnswer
+  margin-bottom 3em 
+  margin-top 0
+  padding-top 0
+  
+  p
+    font-size 1em 
+
+.backhome
+  padding-top 4em 
 
 hr.splitter
   // width 70%
@@ -237,7 +267,7 @@ hr.splitter
   align(both)
   
 .role
-  margin-bottom 1em 
+  margin-bottom 2em 
   padding-top .5em   
   
   p
@@ -245,6 +275,12 @@ hr.splitter
     padding-bottom 0
     margin-top 0
     margin-bottom 0
+    
+  a
+    &:link
+      // text-decoration none
+    &:hover
+      // text-decoration underline 
 
   // a  
   //   &:link 
