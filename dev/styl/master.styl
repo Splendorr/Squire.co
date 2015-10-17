@@ -110,34 +110,74 @@ p
     
   line-height 1.3em
   a
+    font-weight bold
+    // text-shadow: 1px 0px rgba(255,255,255,1.0); 
+    
     &:link 
-      color: link
+      // color: link
+      color: #fff
       // text-decoration none
       background-image: none
       // border-bottom: 1px solid link;
       
     &:hover 
-      color: linkhover
+      // color: linkhover
+      color: #FFF
       background-image: none
       // border-bottom: 1px solid linkhover;
     &:visited 
-      color: linkvisited
+      // color: linkvisited
+      color: #FFF
     &:active 
-      color: linkactive
+      color: #FFF
+      // color: linkactive
   
 p.tagline
   font-size 1.3em
+  padding-bottom 1em
   // padding-bottom 1em
     
-#letterhead
-  col(1/4)
-  shift(3/4)
-  max-width 25%
+.letterframe
+  center(60em)
+  text-align left
+  
+#letterlogo
+  col(1/2)
+  // shift(3/4)
+  max-width 50%
   margin-top 4em
   margin-bottom 4em  
   
+  +below(900px)
+    margin-top 1em
+    margin-bottom 1em 
+  
+#letteraddress
+  margin-top 8.5em
+  col(1/4)
+  shift(1/4)
+  font-size 0.8em
+  
+  +below(900px)
+    margin-top 0
+    margin-bottom 4em
+    stack()
+    unshift()
+    font-size 0.7em
+  
+  p
+    margin-top 0
+    margin-bottom 0
+    padding-top 0
+    padding-bottom 0
+  
 #letterbody
-  col(1)
+  col(3/4)
+  // offset(-1/2)
+  // stack()
+    
+  +below(900px)
+    stack()
     
 p.openletter
   font-size 1.4em
@@ -146,7 +186,7 @@ hr.splitter
   // width 70%
   border-top 5px solid white 
   border-bottom 5px solid white 
-  margin-bottom 1em !important
+  margin-bottom 2em !important
   margin-top 1em
   // padding-bottom 1em
   
@@ -182,7 +222,7 @@ hr.splitter
   height 14em
   // background-color #FFF 
   border 1px solid
-  margin-bottom 1em
+  // margin-bottom 1em
   // margin-right 1em
   // margin-left 1em
     
@@ -195,6 +235,32 @@ hr.splitter
 .gamename
   // position relative
   align(both)
+  
+.role
+  margin-bottom 1em 
+  padding-top .5em   
+  
+  p
+    padding-top 0
+    padding-bottom 0
+    margin-top 0
+    margin-bottom 0
+
+  // a  
+  //   &:link 
+  //     color: link
+  //     text-decoration none
+  //     background-image: none
+  //     // border-bottom: 1px solid link;
+      
+  //   &:hover 
+  //     color: linkhover
+  //     background-image: none
+  //     // border-bottom: 1px solid linkhover;
+  //   &:visited 
+  //     color: linkvisited
+  //   &:active 
+  //     color: linkactive
   
 .brigador
   background url("../img/brigador-bg.png") center center
@@ -210,6 +276,42 @@ hr.splitter
   
 .delversdrop
   background url("../img/delversdrop-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+    
+.kerfuffle
+  background url("../img/kerfuffle-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+      
+.pioneers
+  background url("../img/pioneers-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+        
+.wherethewater
+  background url("../img/wherethewater-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+          
+.mushroom11
+  background url("../img/mushroom11-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+            
+.borumo
+  background url("../img/borumo-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+              
+.homeimprov
+  background url("../img/homeimprov-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
