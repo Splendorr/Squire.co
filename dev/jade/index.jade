@@ -1,13 +1,24 @@
 extends layout
+block vars
+  - var pageTitle = 'SQUIRE'
 
 block content
-  #container
-    img(src="img/squirelogo.svg", alt="Squire Logo")
+  #squirelogo
+    a(href="#")
+      img(src="img/squirelogo.svg", alt="Squire Logo")
   #contentwidth
     .fullcol
-      p.tagline Squire is a professional video game company that produces & promotes great games.
+      .topcopy
+        p.tagline Squire is a professional video game company that produces & promotes great games.
 
-      hr.splitter
+        p Look #[a(href="#games") below] and pay attention to all the beautiful games Squire is working with. They are all just the best people and projects.
+
+        p To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
+
+        p If you’re wondering why Junklatch is now Squire, there is an #[a(href="openletter.html") open letter] explaining the shift.
+
+      //- a(href="#games", alt="Games Squire has worked with.")
+      hr#games.splitter
 
       .gamelist
         .onethird
