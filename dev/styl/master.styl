@@ -1,0 +1,144 @@
+@import 'jeet'
+
+// edit()
+
+normalize-css()
+base()
+
+font-face('nb_international_mono-webfont', 'fonts', 'normal', 'normal')
+
+html
+  // min-height 100%
+  // height: 100%
+  // width: 100%
+  background-color #3333d3 !important
+  font-family 'nb_international_mono-webfont', monospace;
+  
+
+  // margin:0;
+  // margin: 0 auto;
+  // padding:0;
+  
+  // overflow hidden
+  
+  // width: auto
+  // box-sizing:border-box
+  
+  
+
+body
+  -webkit-text-size-adjust: 100%;
+  
+  // min-height 100% 
+  // height: 100%
+  // width: 100%
+  // padding: 50px
+  background-color #3333d3 !important
+  color: white 
+  
+  // margin:0;
+  // margin: 0 auto;
+  // padding:0;
+  
+  // overflow hidden
+  
+  // width: auto
+  // box-sizing:border-box
+  text-align center
+  font-family 'nb_international_mono-webfont', monospace;
+  
+  padding-bottom 4em
+  
+#container
+  // text-align center
+
+p
+  font-family 'nb_international_mono-webfont', monospace;
+  // text-align center 
+
+// SVG fix for IE 
+img 
+  width: 100%
+
+img, svg
+  max-width 100%
+  // display: block
+    
+#contentwidth
+  // center(100%, 15%)
+  center(100%, 5%)
+  // cf()
+  
+p.tagline
+  font-size 1.4em
+  // padding-bottom 1em  
+
+hr.splitter
+  // width 70%
+  border-top 5px solid white 
+  border-bottom 5px solid white 
+  margin-bottom 1em !important
+  margin-top 1em
+  // padding-bottom 1em
+  
+.fullcol
+  col(1)
+  // cf()
+
+.gamelist
+  // transition: all .5s ease
+  cf()
+  // padding-top 1em
+  
+.onethird
+  transition: all .5s ease
+  // cf()
+  col(1/3, cycle: 3)
+  // col(1/3)
+  // cf()
+  // span(1/3)
+  // col(1/3)
+  
+  +below(900px)
+    col(1/2, uncycle: 3, cycle: 2)
+  
+  +below(600px)
+    col(1)
+  
+.gamebox
+  // transition: all .5s ease
+  position relative
+  height 14em
+  // background-color #FFF 
+  border 1px solid
+  margin-bottom 1em
+  // margin-right 1em
+  // margin-left 1em
+    
+  img
+    position relative
+    align(both)
+    max-width 100%
+    
+
+.gamename
+  // position relative
+  align(both)
+  
+.brigador
+  background url("/img/brigador-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+
+.rk3000
+  background url("/img/rk3000-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+  
+.delversdrop
+  background url("/img/delversdrop-bg.png") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
