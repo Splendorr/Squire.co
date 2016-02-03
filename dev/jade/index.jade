@@ -3,37 +3,57 @@ block vars
   - var pageTitle = 'SQUIRE'
 
 block content
-  #squirelogo
-    a(href="#")
-      img(src="img/squirelogo.svg", alt="Squire Logo")
+  //- #squirelogo
+  //-   a(href="#")
+  //-     img(src="img/squirelogo.svg", alt="Squire Logo")
   #contentwidth
     .fullcol
-      .topcopy
-        p.tagline Squire is a video game company that produces & promotes great games.
+      .clearfix
+        .toprow
+          .squirelogoleft
+            a(href="#")
+              img(src="img/squirelogo.svg", alt="Squire Logo")
+          .topcopy
+            p.tagline Squire is a video game company that produces & promotes great games.
 
-        //- p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
+            //- p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
 
-        p To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
+            p To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
+            
+            .contactlinks
+              a(href="mailto:chris@squire.co")
+                img.squireEmail(src="img/mailsolid.png", alt="Email")
+              a(href="http://twitter.com/junklatch")
+                img.squireTwitter(src="img/twitter.png", alt="Twitter")
+              a(href="faq.html")
+                img.squireTwitter(src="img/faq.png", alt="FAQ")
+              //- ul
+                //- li.listpadright email: 
+                  //- a(href="mailto:chris@squire.co") chris@squire.com
+                //- li twitter: 
+                  //- a(href="http://twitter.com/junklatch") @junklatch
+                //- a(href="skype:dwyfi1")
+                //-   img.squireSkype(src="img/skype.png", alt="Squire Logo")
+
+            //- p If you’re wondering why Junklatch is now Squire, there is an #[a(href="openletter.html") open letter] explaining the shift.
+
+            //- a(href="#games", alt="Games Squire has worked with.")
         
-        .contactlinks
-          a(href="mailto:chris@squire.co")
-            img.squireEmail(src="img/mailsolid.png", alt="Email")
-          a(href="http://twitter.com/junklatch")
-            img.squireTwitter(src="img/twitter.png", alt="Twitter")
-          a(href="faq.html")
-            img.squireTwitter(src="img/faq.png", alt="FAQ")
-          //- ul
-            //- li.listpadright email: 
-              //- a(href="mailto:chris@squire.co") chris@squire.com
-            //- li twitter: 
-              //- a(href="http://twitter.com/junklatch") @junklatch
-            //- a(href="skype:dwyfi1")
-            //-   img.squireSkype(src="img/skype.png", alt="Squire Logo")
+        //- hr#games.splitter
+        .currentProjects.clearfix
+          .currentProjectsLine
+            hr#games.splitterWithText
+          .currentProjectsTitle
+            p CURRENT PROJECTS
+          .currentProjectsLine
+            hr#games.splitterWithText
 
-        //- p If you’re wondering why Junklatch is now Squire, there is an #[a(href="openletter.html") open letter] explaining the shift.
-
-      //- a(href="#games", alt="Games Squire has worked with.")
-      hr#games.splitter
+        //- #currentprojects.clearfix
+        //-   .centeredline
+        //-     hr#games.splitter
+        //-   .centeredtitlebox
+        //-     .centeredtitle
+        //-       p CURRENT PROJECTS  
 
       .gamelist
         .onehalf
@@ -73,6 +93,16 @@ block content
             p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
             //- .gamename
               p Home Improvisation
+      img.triangle(src="img/triangle192.png", alt="A triangle")
+
+      .currentProjects.clearfix
+        .currentProjectsLine
+          hr#games.splitterWithText
+        .currentProjectsTitle
+          p PAST PROJECTS
+        .currentProjectsLine
+          hr#games.splitterWithText
+
       .gamelist.part3              
         .onethird
           a(href="http://delversdrop.com/")

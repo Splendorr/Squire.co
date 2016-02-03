@@ -12,6 +12,9 @@ linkactive = #9d53aa
 linkvisited = #ae70d6
 linkhover = #eb7cff
 
+.clearfix
+  clearfix() 
+
 html
   // min-height 100%
   // height: 100%
@@ -75,19 +78,6 @@ a
   &:active 
     // color: linkactive
     color: #FFF
-    
-#squirelogo
-  center(30em, 5%)
-  margin-top 4rem
-  margin-bottom 1rem 
-  
-  +below(900px)
-    margin-top 6rem
-    margin-bottom 1rem 
-  
-  +below(600px)
-    margin-top 4rem 
-    margin-bottom 1rem
  
 
 // SVG fix for IE 
@@ -102,14 +92,7 @@ img, svg
   // center(100%, 15%)
   center(100%, 5%)
   // cf()
-    
-.topcopy
-  center(40em)
-  text-align justify
-  // text-align left
-
-  +below(600px)
-    text-align left
+  
   
 .centered
   text-align center
@@ -144,7 +127,9 @@ p
       // color: linkactive
   
 p.tagline
-  font-size 1.3em
+  // font-size 1.3em
+  font-size 1.7em
+  line-height 1.2em
   // padding-bottom 2em
   // padding-bottom 1em
   text-align justify
@@ -152,15 +137,59 @@ p.tagline
   +below(600px)
     text-align left
     
+#squirelogo
+  center(30em, 5%)
+  margin-top 4rem
+  margin-bottom 1rem 
+  
+  +below(900px)
+    margin-top 6rem
+    margin-bottom 1rem 
+  
+  +below(600px)
+    margin-top 4rem 
+    margin-bottom 1rem
+    
+.toprow
+  margin-top 1em
+  // center(100%, 10%)
+  center(100%, 10%)
+  
+  
+.squirelogoleft
+  // col(1/3, offset: 1/6)
+  // col(3/6, gutter: 1.3)
+  col(3/6, offset: 1/12, gutter: 1.3)
+  // unstack()
+  text-align right
+  margin-top 2em
+
+.topcopy
+  // center(40em)
+  // col(1/3)
+  col(2/6, gutter: 1.3)
+  // unstack()
+  text-align justify
+  // text-align left
+  // margin-top 2.6rem
+
+  +below(600px)
+    text-align left
+    
 .contactlinks
   // center(100%)
-  text-align center
-  // text-align left
+  // text-align center
+  text-align left
   // padding-top 2em
   // padding-bottom 2em
+  line-height 1.3em
+  margin-top 1.6rem
+  margin-bottom 1em 
+  padding-top 0 
+  
     
   img
-    height 2em
+    height 1.5em
     width auto 
   
   ul
@@ -266,18 +295,71 @@ p.faqQuestion
   padding-top 4em 
   // text-align center
   text-align left
-
-hr.splitter
-  // width 70%
-  border-top 5px solid white 
-  border-bottom 5px solid white 
-  margin-bottom 2em !important
-  margin-top 1em
-  // padding-bottom 1em
   
 .fullcol
   col(1)
   // cf()
+    
+#currentprojects
+  position relative
+  text-align center
+  col(1)
+  .centeredline
+    // position absolute
+    // position relative
+    // top 0
+    center(100%)
+  .centeredtitlebox
+    position absolute
+    // position relative
+    // top 0
+    // width 100% 
+    center(100%)
+    text-align center
+    // background-color #3333d3 
+  // .centeredtitle
+  //   p
+  //     background-color #3333d3
+  
+hr.splitter
+  // width 80%
+  // center(100%, 10%)
+  border-top 5px solid white 
+  border-bottom 5px solid white 
+  margin-bottom 2rem !important
+  margin-top 1rem
+  // padding-bottom 1em
+    
+.currentProjects
+  margin-top 1em
+    
+hr.splitterWithText
+  // width 80%
+  // center(100%, 10%)
+  border-top 5px solid white 
+  border-bottom 5px solid white 
+  margin-bottom 2rem !important
+  margin-top 0.25rem
+  // padding-bottom 1em
+
+.currentProjectsLine
+  col(3/7, gutter: 1.3, cycle: 3)
+
+.currentProjectsTitle
+  col(1/7, gutter: 1.3, cycle: 3)
+  p
+    line-height 1em
+    font-size 1.3em  
+    padding-top 0
+    margin-top 0rem 
+    font-weight bold 
+  
+
+.triangle
+  width 192px
+  height auto 
+  margin-bottom 2em
+   
 
 .gamelist
   // transition: all .5s ease
@@ -329,7 +411,7 @@ hr.splitter
     width auto
     
 .gamebox.wherethewater, .gamebox.gonehome, .gamebox.rk3000, .gamebox.homeimprov
-  height 16em
+  height 14em
 
 .gamename
   // position relative
