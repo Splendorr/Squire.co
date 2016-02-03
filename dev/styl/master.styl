@@ -264,28 +264,31 @@ hr.splitter
   // transition: all .5s ease
   cf()
   // padding-top 1em
+    
+.onehalf
+  col(1/2, gutter: 1.3, cycle: 2)
+  +below(900px)
+    col(1)
   
 .onethird
-  // transition: all .5s ease
-  // cf()
-  // col(1/3, cycle: 3)
   col(1/3, gutter: 1.3, cycle: 3)
-  // col(1/3)
-  // cf()
-  // span(1/3)
-  // col(1/3)
-  
   +below(900px)
-    // col(1/2, uncycle: 3, cycle: 2)
     col(1/2, gutter: 1.3, uncycle: 3, cycle: 2)
-  
   +below(600px)
     col(1)
+    
+.onethirdOffset
+  col(1/3, offset: 1/6, gutter: 1.3, cycle: 3)
+  +below(900px)
+    col(1/2, gutter: 1.3, uncycle: 3, cycle: 2)
+  +below(600px)
+    col(1)
+
   
 .gamebox
   // transition: all .5s ease
   position relative
-  height 14em
+  height 12em
   // background-color #FFF 
   border 1px solid
   // margin-bottom 1em
@@ -296,9 +299,18 @@ hr.splitter
   img
     position relative
     align(both)
-    max-width 75%
-    // max-height 100%
+    // max-width 75%
+    max-height 80%
+    width auto
+  img.oneHundred
+    position relative
+    align(both)
+    // max-width 75%
+    max-height 100%
+    width auto
     
+.gamebox.wherethewater, .gamebox.gonehome
+  height 16em
 
 .gamename
   // position relative
@@ -338,7 +350,14 @@ hr.splitter
   //     color: linkactive
   
 .brigador
-  background url("../img/brigador-bg.png") center center
+  background url("../img/brigador-bg.png") center center no-repeat
+  background-color #0A0100 
+  -webkit-background-size contain 
+  -o-background-size contain
+  background-size contain 
+
+.gonehome
+  background url("../img/gonehome-bg.jpg") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
@@ -361,8 +380,18 @@ hr.splitter
   -o-background-size cover 
   background-size cover 
       
+.pioneersGradient
+  background-color #EADFC1 
+  // background: linear-gradient(
+  //   top, 
+  //   #EADFC1,
+  //   50% #EADFC1,
+  //   60% #4A6586,
+  //   100% #4A6586
+  // )
 .pioneers
-  background url("../img/pioneers-bg.png") center center
+  background-color #EADFC1 
+  background url("../img/pioneers-bg.png") center center no-repeat
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
