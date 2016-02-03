@@ -78,16 +78,16 @@ a
     
 #squirelogo
   center(30em, 5%)
-  margin-top 6em
-  margin-bottom 1em 
+  margin-top 4rem
+  margin-bottom 1rem 
   
   +below(900px)
-    margin-top 6em
-    margin-bottom 1em 
+    margin-top 6rem
+    margin-bottom 1rem 
   
   +below(600px)
-    margin-top 4em 
-    margin-bottom 1em
+    margin-top 4rem 
+    margin-bottom 1rem
  
 
 // SVG fix for IE 
@@ -153,10 +153,25 @@ p.tagline
     text-align left
     
 .contactlinks
-  center(100%)
+  // center(100%)
   text-align center
-  padding-top 2em
-  padding-bottom 2em
+  // text-align left
+  // padding-top 2em
+  // padding-bottom 2em
+  
+  ul
+    display inline-block
+    // font-size 1.15em 
+    // inline-list: 1em
+    // center(345px)
+  li
+    // padding-left 0
+    // margin-left 0  
+    display inline
+    white-space: nowrap
+    
+  li.listpadright
+    padding-right 2em
   
   +below(600px)
     text-align left
@@ -309,7 +324,7 @@ hr.splitter
     max-height 100%
     width auto
     
-.gamebox.wherethewater, .gamebox.gonehome
+.gamebox.wherethewater, .gamebox.gonehome, .gamebox.rk3000, .gamebox.homeimprov
   height 16em
 
 .gamename

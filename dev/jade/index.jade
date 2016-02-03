@@ -9,19 +9,22 @@ block content
   #contentwidth
     .fullcol
       .topcopy
-        p.tagline Squire is a professional video game company that produces & promotes great games.
+        p.tagline Squire is a video game company that produces & promotes great games.
 
-        p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
+        //- p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
 
         p To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
         
         .contactlinks
-          a(href="mailto:chris@squire.co")
-            img.squireEmail(src="img/mail.png", alt="Squire Logo")
-          a(href="http://twitter.com/junklatch")
-            img.squireTwitter(src="img/twitter.png", alt="Squire Logo")
-          a(href="skype:dwyfi1")
-            img.squireSkype(src="img/skype.png", alt="Squire Logo")
+          ul
+            li.listpadright email: 
+              a(href="mailto:chris@squire.co") chris@squire.com
+                //- img.squireEmail(src="img/mail.png", alt="Squire Logo")
+            li twitter: 
+              a(href="http://twitter.com/junklatch") @junklatch
+                //- img.squireTwitter(src="img/twitter.png", alt="Squire Logo")
+            //- a(href="skype:dwyfi1")
+            //-   img.squireSkype(src="img/skype.png", alt="Squire Logo")
 
         //- p If you’re wondering why Junklatch is now Squire, there is an #[a(href="openletter.html") open letter] explaining the shift.
 
@@ -48,7 +51,7 @@ block content
             //- .gamename
               p Where the Water Tastes Like Wine
       .gamelist.part2              
-        .onethird
+        .onehalf
           a(href="http://www.rk3000.com/")
             .gamebox.rk3000
               img(src="img/rk3000-logo.png", alt="RK3000 Logo")
@@ -57,7 +60,7 @@ block content
             p #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
             //- .gamename
               //- p RK3000
-        .onethird
+        .onehalf
           a(href="http://homeimprovisation.com/")
             .gamebox.homeimprov
               img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
@@ -66,6 +69,7 @@ block content
             p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
             //- .gamename
               p Home Improvisation
+      .gamelist.part3              
         .onethird
           a(href="http://delversdrop.com/")
             .gamebox.delversdrop
@@ -105,7 +109,7 @@ block content
               p Boru Mo
         
       
-        .onethirdOffset
+        .onethird
           a(href="http://ratcasket.com/")
             .gamebox.kerfuffle
               img(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
