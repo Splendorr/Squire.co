@@ -141,7 +141,7 @@ p
     margin-bottom 1rem
     
 .toprow
-  margin-top 2em
+  margin-top 4rem
   // center(100%, 10%)
   center(100%)
   
@@ -150,7 +150,7 @@ p
   // col(1/3, offset: 1/6)
   // col(3/6, gutter: 1.3)
   // col(3/6, offset: 1/12, gutter: 1.3)
-  col(6/14, offset: 1/14, gutter: 1.3)
+  col(6/16, offset: 1/16, gutter: 1.3)
   // unstack()
   text-align right
   // margin-top 2em
@@ -159,7 +159,7 @@ p
   // center(40em)
   // col(1/3)
   // col(2/6, gutter: 1.3)
-  col(5/14, offset: 1/14, gutter: 1.3)
+  col(7/16, offset: 1/16, gutter: 1.3)
   margin-top 0
   padding-top 0
   // unstack()
@@ -310,27 +310,6 @@ p.faqQuestion
 .fullcol
   col(1)
   // cf()
-    
-#currentprojects
-  position relative
-  text-align center
-  col(1)
-  .centeredline
-    // position absolute
-    // position relative
-    // top 0
-    center(100%)
-  .centeredtitlebox
-    position absolute
-    // position relative
-    // top 0
-    // width 100% 
-    center(100%)
-    text-align center
-    // background-color #3333d3 
-  // .centeredtitle
-  //   p
-  //     background-color #3333d3
   
 hr.splitter
   // width 80%
@@ -353,14 +332,32 @@ hr.splitterWithText
   margin-top 0.25rem
   // padding-bottom 1em
 
-.currentProjectsLine
-  col(3/7, gutter: 1.3, cycle: 3)
+.currentProjectsLineOne
+  col(3/16, gutter: 1.3, cycle: 3)
+
+.currentProjectsLineTwo
+  col(11/16, gutter: 1.3, cycle: 3)
 
 .currentProjectsTitle
-  col(1/7, gutter: 1.3, cycle: 3)
+  col(2/16, gutter: 1.3, cycle: 3)
   p
     line-height 1em
-    font-size 1.3em  
+    font-size 1.1em  
+    padding-top 0
+    margin-top 0rem 
+    font-weight bold 
+  
+.pastProjectsLineOne
+  col(2/18, gutter: 1.3, cycle: 3)
+
+.pastProjectsLineTwo
+  col(14/18, gutter: 1.3, cycle: 3)
+
+.pastProjectsTitle
+  col(2/18, gutter: 1.3, cycle: 3)
+  p
+    line-height 1em
+    font-size 1.1em  
     padding-top 0
     margin-top 0rem 
     font-weight bold 
