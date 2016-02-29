@@ -18,15 +18,18 @@ block content
 
             //- p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
 
-            p.secondline To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
             
-            .contactlinks
-              a(href="mailto:chris@squire.co")
-                img.squireEmail(src="img/mailsolid.png", alt="Email")
-              a(href="http://twitter.com/junklatch")
-                img.squireTwitter(src="img/twitter.png", alt="Twitter")
-              a(href="faq.html")
-                img.squireTwitter(src="img/faq.png", alt="FAQ")
+            .clearfix
+              .contactlinks
+                a(href="mailto:chris@squire.co")
+                  img.squireEmail(src="img/mailsolid.png", alt="Email")
+                a(href="http://twitter.com/junklatch")
+                  img.squireTwitter(src="img/twitter.png", alt="Twitter")
+                a(href="faq.html")
+                  img.squireTwitter(src="img/faq.png", alt="FAQ")
+              
+              p.secondline To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
+
               //- ul
                 //- li.listpadright email: 
                   //- a(href="mailto:chris@squire.co") chris@squire.com
@@ -44,7 +47,7 @@ block content
           .currentProjectsLineOne
             hr#games.splitterWithText
           .currentProjectsTitle
-            p CURRENT PROJECTS
+            p PROJECTS
           .currentProjectsLineTwo
             hr#games.splitterWithText
 
