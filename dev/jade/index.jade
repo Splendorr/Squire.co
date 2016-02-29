@@ -18,17 +18,32 @@ block content
 
             //- p Look #[a(href="#games") below] to the wonderful games & developers that Squire is lucky enough to work with. They're the best.
 
+            p.secondline To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
             
-            .clearfix
-              .contactlinks
-                a(href="mailto:chris@squire.co")
-                  img.squireEmail(src="img/mailsolid.png", alt="Email")
-                a(href="http://twitter.com/junklatch")
-                  img.squireTwitter(src="img/twitter.png", alt="Twitter")
-                a(href="faq.html")
-                  img.squireTwitter(src="img/faq.png", alt="FAQ")
+            .contactlinks
+              a(href="mailto:chris@squire.co")
+                img.squireEmail(src="img/mailsolid.png", alt="Email")
+              a(href="http://twitter.com/junklatch")
+                img.squireTwitter(src="img/twitter.png", alt="Twitter")
+              a(href="faq.html")
+                img.squireTwitter(src="img/faq.png", alt="FAQ")
+
+            .newsletter
+              //- p.upcase.signupto Mailing list:
+              //- .field
+              // Begin MailChimp Signup Form
+              #mc_embed_signup
+                form#mc-embedded-subscribe-form.validate(action='//nachobeard.us11.list-manage.com/subscribe/post?u=d87f25b37c39da5b986167616&id=a4468a20d4', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                  #mc_embed_signup_scroll
+                    input#mc-embedded-subscribe.button(type='submit', value='Sign Up', name='subscribe')
+                    span.formcontainer
+                      input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Sign up for our mailing list', required='')
+                      // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                      div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_d87f25b37c39da5b986167616_a4468a20d4', tabindex='-1', value='')
+                      //- .clear
+              // End mc_embed_signup
               
-              p.secondline To find out more about what the company does and how to work together, please #[a(href="faq.html") read the FAQ].
 
               //- ul
                 //- li.listpadright email: 
@@ -113,23 +128,25 @@ block content
             //-     p Where the Water Tastes Like Wine
       .gamelist.part2              
         .onehalf
-          a(href="http://www.rk3000.com/")
-            .gamebox.rk3000
-              img(src="img/rk3000-logo.png", alt="RK3000 Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
-            //- .gamename
-              //- p RK3000
+          .whiteBorder
+            a(href="http://www.rk3000.com/")
+              .gamebox.rk3000
+                img(src="img/rk3000-logo.png", alt="RK3000 Logo")
+          //- .role
+          //-   //- p Marketing/PR
+          //-   p #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
+          //-   //- .gamename
+          //-     //- p RK3000
         .onehalf
-          a(href="http://homeimprovisation.com/")
-            .gamebox.homeimprov
-              img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
-            //- .gamename
-              p Home Improvisation
+          .whiteBorder
+            a(href="http://homeimprovisation.com/")
+              .gamebox.homeimprov
+                img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
+          //- .role
+          //-   //- p Marketing/PR
+          //-   p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
+          //-   //- .gamename
+          //-     p Home Improvisation
       img.triangle(src="img/triangle192.png", alt="A triangle")
 
       .currentProjects.clearfix
