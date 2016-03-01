@@ -51,6 +51,25 @@ $( ".gonehome" ).click(function() {
   //   // .to(expanded, 2, { className:"-=boxGenieOpened" }, 5)
 });
 
+var openedWTW = false;
+var tlWTW = new TimelineMax();
+
+$( ".wherethewater" ).click(function() {
+  // filter contracted so that unnecessary tweens on already .expanded aren't created
+
+  if ( openedWTW == true ) {
+    tlWTW.to($("#wtwShifter"), 1, { className:"-=boxGenieOpened"})
+    openedWTW = false;
+    console.log('removed onehalf');
+  }
+  else {
+    tlWTW.to($("#wtwShifter"), 1, { className:"+=boxGenieOpened"})
+    openedWTW = true;
+    console.log('added onehalf');
+  };
+  console.log('clicked WTW');
+});
+
 // $( ".boxGenie" ).click(function() {
 //   var tl = new TimelineLite();
 //   tl.to($(this), 2, { className:"boxGenieOpened" })
