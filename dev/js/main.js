@@ -52,22 +52,40 @@ $( ".gonehome" ).click(function() {
 });
 
 var openedWTW = false;
-var tlWTW = new TimelineMax();
+// var wtwDetails = new TimelineMax({paused:true});
+// wtwDetails.set($(".wtwProjectDetails"), { width:"50%",visibility:"visible"})
+// .from($(".wtwProjectDetails"), 0.6, {width:"0%", autoAlpha:0});
+
+var wtwDetails = new TimelineMax({paused:true});
+wtwDetails.to($(".wtwProjectDetails"), 0.7, { width:"67%"}, "half")
+.to($(".wtwProjectDetails"), 0.5, {width:"0%"}, "zero")
+.to($(".wtwProjectDetails"), 0.5, { width:"67%"}, "halfAgain");
+
+// var wtwImage = new TimelineMax();
+// wtwImage.set($(".wtwGamebox"), { width:"100%"})
+// .from($(".wtwGamebox"), 0.6, {width:"50%"});
+
+var wtwImage = new TimelineMax({paused:true});
+wtwImage.to($(".wtwGamebox"), 0.6, {width:"33%"}, "half")
+  .to($(".wtwGamebox"), 0.6, { width:"100%"}, "full");
+
 
 $( ".wherethewater" ).click(function() {
   // filter contracted so that unnecessary tweens on already .expanded aren't created
 
   if ( openedWTW == true ) {
-    // tlWTW.to($(".wtwGamebox"), 1, { width:"100%" })
-    tlWTW.to($(".wtwProjectDetails"), 1, { width:"0%"}, 0)
-    tlWTW.to($(".wtwText"), 1, { autoAlpha:0}, 0)
+    console.log("gowtwImage")
+    wtwImage.tweenFromTo("full", "half");
+    wtwDetails.tweenFromTo("zero", "halfAgain");
+    // wtwDetails.reverse();
     openedWTW = false;
     console.log('set wtw 100' + openedWTW);
   }
   else {
-    // tlWTW.to($(".wtwGamebox"), 1, { width:"50%"})
-    tlWTW.to($(".wtwProjectDetails"), 1, { width:"50%"}, 0)
-    tlWTW.to($(".wtwText"), 1, { autoAlpha:1 }, 0)
+    console.log("gowtwDetails")
+    wtwImage.tweenFromTo("half", "full");
+    wtwDetails.tweenFromTo("half", "zero");
+    // wtwDetails.play(0);
     openedWTW = true;
     console.log('set wtw 50' + openedWTW);
   };
