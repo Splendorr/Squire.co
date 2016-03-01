@@ -571,7 +571,7 @@ hr.splitterWithText
       // opacity 1
 
 .gamebox, .projectDetails
-  transition: all .5s ease  
+  // transition: all .5s ease  
   
 .wtwImage
   span(1/4)
@@ -613,6 +613,82 @@ hr.splitterWithText
   background-color #FFF
   color #3333d3
   // color #FFF
+  text-align left
+  height 14em 
+  
+  p
+    padding-left 1em 
+    text-align left
+    line-height 1.2em  
+    // opacity 0
+    
+  a
+    &:link 
+      // color: link
+      color: #3333d3
+      // text-decoration none
+      font-weight normal 
+      background-image: none
+      // border-bottom: 1px solid link;
+      
+    &:hover 
+      // color: linkhover
+      color: #3333d3
+      background-image: none
+      // border-bottom: 1px solid linkhover;
+    &:visited 
+      // color: linkvisited
+      color: #3333d3
+    &:active 
+      // color: linkactive
+      color: #3333d3
+      
+.wtwGamebox
+  // transition: all .5s ease
+  span(1)
+  
+  // span(1)
+  // *zoom: 1;
+  // float: left;
+  // clear: none;
+  // text-align: inherit;
+  // width: 100%;
+  // margin-left: 0%;
+  // margin-right: 0%;
+
+  position relative
+  height 14em
+  z-index 0
+  // background-color white 
+    
+  img
+    position relative
+    align(both)
+    max-height 80%
+    width auto
+  img.oneHundred
+    position relative
+    align(both)
+    max-height 100%
+    width auto
+    
+// .wtwGamebox:before,
+// .wtwGamebox:after {
+//   content: '';
+//   display: table;
+// }
+// .wtwGamebox:after {
+//   clear: both;
+// }
+
+
+.wtwProjectDetails
+  span(0)
+  width: 0%
+  // opacity 0
+  position relative
+  background-color #FFF
+  color #3333d3
   text-align left
   height 14em 
   

@@ -58,14 +58,18 @@ $( ".wherethewater" ).click(function() {
   // filter contracted so that unnecessary tweens on already .expanded aren't created
 
   if ( openedWTW == true ) {
-    tlWTW.to($("#wtwShifter"), 1, { className:"-=boxGenieOpened"})
+    // tlWTW.to($(".wtwGamebox"), 1, { width:"100%" })
+    tlWTW.to($(".wtwProjectDetails"), 1, { width:"0%"}, 0)
+    tlWTW.to($(".wtwText"), 1, { autoAlpha:0}, 0)
     openedWTW = false;
-    console.log('removed onehalf');
+    console.log('set wtw 100' + openedWTW);
   }
   else {
-    tlWTW.to($("#wtwShifter"), 1, { className:"+=boxGenieOpened"})
+    // tlWTW.to($(".wtwGamebox"), 1, { width:"50%"})
+    tlWTW.to($(".wtwProjectDetails"), 1, { width:"50%"}, 0)
+    tlWTW.to($(".wtwText"), 1, { autoAlpha:1 }, 0)
     openedWTW = true;
-    console.log('added onehalf');
+    console.log('set wtw 50' + openedWTW);
   };
   console.log('clicked WTW');
 });
