@@ -57,17 +57,18 @@ var openedWTW = false;
 // .from($(".wtwProjectDetails"), 0.6, {width:"0%", autoAlpha:0});
 
 var wtwDetails = new TimelineMax({paused:true});
-wtwDetails.to($(".wtwProjectDetails"), 0.7, { width:"67%"}, "half")
-.to($(".wtwProjectDetails"), 0.5, {width:"0%"}, "zero")
-.to($(".wtwProjectDetails"), 0.5, { width:"67%"}, "halfAgain");
+wtwDetails.to($(".wtwProjectDetails"), 0.7, { width:"64.25%"}, "half")
+.to($(".wtwProjectDetails"), 0.5, { width:"0%"}, "zero")
+.to($(".wtwProjectDetails"), 0.5, { width:"64.25%"}, "halfAgain");
 
 // var wtwImage = new TimelineMax();
 // wtwImage.set($(".wtwGamebox"), { width:"100%"})
 // .from($(".wtwGamebox"), 0.6, {width:"50%"});
 
 var wtwImage = new TimelineMax({paused:true});
-wtwImage.to($(".wtwGamebox"), 0.6, {width:"33%"}, "half")
-  .to($(".wtwGamebox"), 0.6, { width:"100%"}, "full");
+wtwImage.to($(".wtwGamebox"), 0.6, { width:"35.75%"}, "half")
+  .to($(".wtwGamebox"), 0.6, { width:"100%"}, "full")
+  .to($(".wtwGamebox"), 0.6, { width:"35.75%"}, "halfAgain");
 
 
 $( ".wherethewater" ).click(function() {
@@ -75,8 +76,8 @@ $( ".wherethewater" ).click(function() {
 
   if ( openedWTW == true ) {
     console.log("gowtwImage")
-    wtwImage.tweenFromTo("full", "half");
-    wtwDetails.tweenFromTo("zero", "halfAgain");
+    wtwImage.tweenFromTo("full", "halfAgain");
+    wtwDetails.tweenFromTo("zero", "halfAgain")
     // wtwDetails.reverse();
     openedWTW = false;
     console.log('set wtw 100' + openedWTW);
