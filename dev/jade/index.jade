@@ -130,9 +130,9 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .rk3000Gamebox.rk3000
+              .rk3000.gameBox
                 img(src="img/rk3000-logo.png", alt="RK3000 Logo")
-              .rk3000ProjectDetails
+              .rk3000.projectDetails
                 p 
                   | DEVELOPER: TK
                   br
@@ -149,9 +149,9 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .homeimprovGamebox.homeimprov
+              .homeimprov.gameBox
                 img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
-              .homeimprovProjectDetails
+              .homeimprov.projectDetails
                 p 
                   | DEVELOPER: TK
                   br
@@ -185,17 +185,32 @@ block content
 
       .gamelist.part3              
         .onethird
-          a(href="http://delversdrop.com/")
-            .gamebox.delversdrop
-              img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
-            //- .gamename
-              //- p Delver's Drop
+          .whiteBorder
+            #shifter
+              .delversdrop.gameBox
+                img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
+              .delversdrop.projectDetails
+                p 
+                  | DEVELOPER: TK
+                  br
+                  | PLATFORMS: TK
+                p 
+                  | + Production
+                  br
+                  | + Promotion
+
+                p 
+                  | twitter: #[a(href="http://twitter.com/storkburntdown") @storkburntdown]
+                  br
+                  | web: #[a(href="http://www.tk.com/") tk.com]
+          //- .role
+          //-   //- p Marketing/PR
+          //-   p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
+          //-   //- .gamename
+          //-     //- p Delver's Drop
         .onethird
           a(href="http://stellarjockeys.com/")
-            .gamebox.brigador
+            .gameBox.brigador
               //- img(src="img/brigador-title.png", alt="Brigador")
               //- .gamename
                 //- p Brigador
@@ -205,7 +220,7 @@ block content
         .onethird
           .pioneersGradient
             a(href="http://pioneersgame.com/")
-              .gamebox.pioneers
+              .gameBox.pioneers
                 //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
           .role
             //- p Marketing/PR
@@ -214,7 +229,7 @@ block content
               p Pioneers
         .onethird
           a(href="http://www.balloonandfriends.com/borumo")
-            .gamebox.borumo
+            .gameBox.borumo
               //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
           .role
             //- p Marketing/PR
@@ -225,8 +240,8 @@ block content
       
         .onethird
           a(href="http://ratcasket.com/")
-            .gamebox.kerfuffle
-              img(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
+            .gameBox.kerfuffle
+              img.oneHundred(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
           .role
             //- p Marketing/PR
             p #[a(href="http://twitter.com/ratcasket") @ratcasket]
@@ -235,7 +250,7 @@ block content
               p Kerfuffle
         .onethird
           a(href="http://mushroom11.com/")
-            .gamebox.mushroom11
+            .gameBox.mushroom11
               img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
           .role
             //- p Marketing/PR

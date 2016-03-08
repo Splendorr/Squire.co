@@ -17,24 +17,6 @@ console.log('priming');
 //   // 'FragrantHeartyKawala', // Slide  11
 // ];
 // 
-// gameBoxes.forEach(function(element, index, array) {
-//   console.log(element + ' index is ' + index)
-//   var tl = index;
-//   console.log(tl)
-// });
-
-// function gamesLoad() {
-
-//     console.log('GAMEBOXES: ran gamesLoad');
-//     initializeGameBoxes();
-//     // loadGfySingle(0);
-//     // loadGfyTriple(0);
-//     // loadGfyDouble(0);
-
-//     // gfyCollection.init();
-//   } // End gfyLoad()
-
-// wherethewater
 
 // var openedGameBoxWidth = "35.75%";
 // var openedProjectDetailsWidth = "64.25%"
@@ -74,80 +56,19 @@ gameBoxSlider = function(clickElement, openVariable){
 }
 
 var openedwherethewater = false;
-var openedgonehome = false;
-
 gameBoxSlider(".wherethewater", openedwherethewater);
+
+var openedgonehome = false;
 gameBoxSlider(".gonehome", openedgonehome);
 
-
-// rk3000
 var openedrk3000 = false;
+gameBoxSlider(".rk3000", openedrk3000);
 
-var rk3000Details = new TimelineMax({paused:true});
-rk3000Details.to($(".rk3000ProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
-.to($(".rk3000ProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".rk3000ProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
-
-var rk3000Image = new TimelineMax({paused:true});
-rk3000Image.to($(".rk3000GameBox"), 0.6, { width:openedGameBoxWidth}, "half")
-  .to($(".rk3000GameBox"), 0.6, { width:"100%"}, "full")
-  .to($(".rk3000GameBox"), 0.6, { width:openedGameBoxWidth}, "halfAgain");
-
-$( ".rk3000" ).click(function() {
-  if ( openedrk3000 == true ) {
-    console.log("gork3000Image")
-    rk3000Image.tweenFromTo("full", "halfAgain");
-    rk3000Details.tweenFromTo("zero", "halfAgain")
-    // rk3000Details.reverse();
-    openedrk3000 = false;
-    console.log('set rk3000 100' + openedrk3000);
-  }
-  else {
-    console.log("gork3000Details")
-    rk3000Image.tweenFromTo("half", "full");
-    rk3000Details.tweenFromTo("half", "zero");
-    // rk3000Details.play(0);
-    openedrk3000 = true;
-    console.log('set rk3000 50' + openedrk3000);
-  };
-  console.log('clicked rk3000');
-});
-// end rk3000
-
-// homeimprov
 var openedhomeimprov = false;
+gameBoxSlider(".homeimprov", openedhomeimprov);
 
-var homeimprovDetails = new TimelineMax({paused:true});
-homeimprovDetails.to($(".homeimprovProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
-.to($(".homeimprovProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".homeimprovProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
-
-var homeimprovImage = new TimelineMax({paused:true});
-homeimprovImage.to($(".homeimprovGameBox"), 0.6, { width:openedGameBoxWidth}, "half")
-  .to($(".homeimprovGameBox"), 0.6, { width:"100%"}, "full")
-  .to($(".homeimprovGameBox"), 0.6, { width:openedGameBoxWidth}, "halfAgain");
-
-$( ".homeimprov" ).click(function() {
-  if ( openedhomeimprov == true ) {
-    console.log("gohomeimprovImage")
-    homeimprovImage.tweenFromTo("full", "halfAgain");
-    homeimprovDetails.tweenFromTo("zero", "halfAgain")
-    // homeimprovDetails.reverse();
-    openedhomeimprov = false;
-    console.log('set homeimprov 100' + openedhomeimprov);
-  }
-  else {
-    console.log("gohomeimprovDetails")
-    homeimprovImage.tweenFromTo("half", "full");
-    homeimprovDetails.tweenFromTo("half", "zero");
-    // homeimprovDetails.play(0);
-    openedhomeimprov = true;
-    console.log('set homeimprov 50' + openedhomeimprov);
-  };
-  console.log('clicked homeimprov');
-});
-// end homeimprov
-
+var openeddelversdrop = false;
+gameBoxSlider(".delversdrop", openeddelversdrop);
 
 
 
