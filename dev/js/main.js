@@ -35,17 +35,24 @@ console.log('priming');
 //   } // End gfyLoad()
 
 // wherethewater
+
+// var openedGameboxWidth = "35.75%";
+// var openedProjectDetailsWidth = "64.25%"
+
+var openedGameboxWidth = "25%";
+var openedProjectDetailsWidth = "75%"
+
 var openedwherethewater = false;
 
 var wherethewaterDetails = new TimelineMax({paused:true});
-wherethewaterDetails.to($(".wherethewaterProjectDetails"), 0.7, { width:"64.25%"}, "half")
+wherethewaterDetails.to($(".wherethewaterProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
 .to($(".wherethewaterProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".wherethewaterProjectDetails"), 0.5, { width:"64.25%"}, "halfAgain");
+.to($(".wherethewaterProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
 
 var wherethewaterImage = new TimelineMax({paused:true});
-wherethewaterImage.to($(".wherethewaterGamebox"), 0.6, { width:"35.75%"}, "half")
+wherethewaterImage.to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "half")
   .to($(".wherethewaterGamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".wherethewaterGamebox"), 0.6, { width:"35.75%"}, "halfAgain");
+  .to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "halfAgain");
 
 $( ".wherethewater" ).click(function() {
   if ( openedwherethewater == true ) {
@@ -72,14 +79,14 @@ $( ".wherethewater" ).click(function() {
 var openedgonehome = false;
 
 var gonehomeDetails = new TimelineMax({paused:true});
-gonehomeDetails.to($(".gonehomeProjectDetails"), 0.7, { width:"64.25%"}, "half")
+gonehomeDetails.to($(".gonehomeProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
 .to($(".gonehomeProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".gonehomeProjectDetails"), 0.5, { width:"64.25%"}, "halfAgain");
+.to($(".gonehomeProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
 
 var gonehomeImage = new TimelineMax({paused:true});
-gonehomeImage.to($(".gonehomeGamebox"), 0.6, { width:"35.75%"}, "half")
+gonehomeImage.to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "half")
   .to($(".gonehomeGamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".gonehomeGamebox"), 0.6, { width:"35.75%"}, "halfAgain");
+  .to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "halfAgain");
 
 $( ".gonehome" ).click(function() {
   if ( openedgonehome == true ) {
@@ -106,14 +113,14 @@ $( ".gonehome" ).click(function() {
 var openedrk3000 = false;
 
 var rk3000Details = new TimelineMax({paused:true});
-rk3000Details.to($(".rk3000ProjectDetails"), 0.7, { width:"64.25%"}, "half")
+rk3000Details.to($(".rk3000ProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
 .to($(".rk3000ProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".rk3000ProjectDetails"), 0.5, { width:"64.25%"}, "halfAgain");
+.to($(".rk3000ProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
 
 var rk3000Image = new TimelineMax({paused:true});
-rk3000Image.to($(".rk3000Gamebox"), 0.6, { width:"35.75%"}, "half")
+rk3000Image.to($(".rk3000Gamebox"), 0.6, { width:openedGameboxWidth}, "half")
   .to($(".rk3000Gamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".rk3000Gamebox"), 0.6, { width:"35.75%"}, "halfAgain");
+  .to($(".rk3000Gamebox"), 0.6, { width:openedGameboxWidth}, "halfAgain");
 
 $( ".rk3000" ).click(function() {
   if ( openedrk3000 == true ) {
@@ -140,14 +147,14 @@ $( ".rk3000" ).click(function() {
 var openedhomeimprov = false;
 
 var homeimprovDetails = new TimelineMax({paused:true});
-homeimprovDetails.to($(".homeimprovProjectDetails"), 0.7, { width:"64.25%"}, "half")
+homeimprovDetails.to($(".homeimprovProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
 .to($(".homeimprovProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".homeimprovProjectDetails"), 0.5, { width:"64.25%"}, "halfAgain");
+.to($(".homeimprovProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
 
 var homeimprovImage = new TimelineMax({paused:true});
-homeimprovImage.to($(".homeimprovGamebox"), 0.6, { width:"35.75%"}, "half")
+homeimprovImage.to($(".homeimprovGamebox"), 0.6, { width:openedGameboxWidth}, "half")
   .to($(".homeimprovGamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".homeimprovGamebox"), 0.6, { width:"35.75%"}, "halfAgain");
+  .to($(".homeimprovGamebox"), 0.6, { width:openedGameboxWidth}, "halfAgain");
 
 $( ".homeimprov" ).click(function() {
   if ( openedhomeimprov == true ) {
