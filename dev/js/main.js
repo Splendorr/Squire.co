@@ -70,6 +70,21 @@ gameBoxSlider(".homeimprov", openedhomeimprov);
 var openeddelversdrop = false;
 gameBoxSlider(".delversdrop", openeddelversdrop);
 
+var openedbrigador = false;
+gameBoxSlider(".brigador", openedbrigador);
+
+var openedpioneers = false;
+gameBoxSlider(".pioneers", openedpioneers);
+
+var openedborumo = false;
+gameBoxSlider(".borumo", openedborumo);
+
+var openedkerfuffle = false;
+gameBoxSlider(".kerfuffle", openedkerfuffle);
+
+var openedmushroom11 = false;
+gameBoxSlider(".mushroom11", openedmushroom11);
+
 
 
 $(document).ready(function(){

@@ -157,6 +157,10 @@ p
   // unstack()
   text-align right
   // margin-top 2em
+  +below(1100px)
+    col(12/16, offset: 2/16, gutter: 1.3)
+  +below(600px)
+    col(1)
 
 .topcopy
   // center(40em)
@@ -166,13 +170,19 @@ p
   margin-top 0
   padding-top 0
   // unstack()
-  text-align justify
+  p
+    text-align justify
   // text-align left
   // margin-top 2.6rem
   margin-top 5.1%
+  
+  +below(1100px)
+    col(12/16, offset: 2/16, gutter: 1.3)
 
   +below(600px)
-    text-align left
+    col(1)
+    p
+      text-align left
     
 p.tagline
   // font-size 1.3em
@@ -180,20 +190,25 @@ p.tagline
   line-height 1.2em
   // padding-bottom 2em
   // padding-bottom 1em
-  text-align justify
+  // text-align justify
   padding-top 0
   margin-top 0
   margin-bottom 0
   // padding-bottom 0
   
   +below(600px)
-    text-align left
+    // text-align left
+    font-size 1.3em 
+    line-height 1.3em
+    // padding-bottom 1em  
 
 p.secondline, .contactlinks, .newsletter   
   // margin-top 1.6rem
   margin-top 4.7%
   margin-bottom 0
   padding-bottom 0
+  +below(600px)
+    margin-top 2em 
 
 p.secondline
   font-size 1em
@@ -205,6 +220,8 @@ p.secondline
 .contactlinks
   // col(1/4)
   span(2/5)
+  +below(600px)
+    col(1)
   // shift(-3/4)
     
   // display flex
@@ -281,6 +298,9 @@ p.secondline
   // padding-bottom 1em
   transition: all .5s ease
   span(3/5)
+  
+  +below(600px)
+    col(1)
   // span(1/2, offset: 1/4)
   // +below(700px)
   //   stack()
@@ -354,6 +374,7 @@ form#mc-embedded-subscribe-form
 #mc_embed_signup_scroll
   // display block
   border 2px solid white !important
+  // border-right none !important 
   background-color #3333d3
   // color #3333d3
   overflow hidden
@@ -387,6 +408,8 @@ input#mc-embedded-subscribe.button
   // blue border for newsletter button
   // border 1px solid #3333d3 !important
   border 1px solid #FFF !important
+  -webkit-border-radius 0px 
+  border-radius 0px 
   
   &:hover
       border 1px solid #3333d3 !important
@@ -625,9 +648,9 @@ hr.splitterWithText
   // background-color #000
   // color #FFF 
   text-align left
-  height 12em 
+  height 12em
     
-  p
+  p, h3
     padding-left 1em 
     text-align left
     font-size 1.1em
@@ -636,9 +659,28 @@ hr.splitterWithText
     padding-bottom 0.5em
     // opacity 0
       
+    .onethird &
+      font-size 1em
+      
+    +below(1400px)
+      line-height 1.3em 
+      font-size 1em 
+
+      .onethird &
+        font-size 0.9em
+
     +below(600px)
-      font-size 0.8em 
       line-height 1.5em 
+      font-size 0.8em 
+
+      .onethird &
+        line-height 1.5em
+        font-size 0.8em
+  
+  h3
+    // padding 0
+    margin 0 
+    font-size 1.1em
     
   a
     &:link 
@@ -660,7 +702,7 @@ hr.splitterWithText
     &:active 
       // color: linkactive
       color: #3333d3
-
+      
     
 .wherethewater, .gonehome, .rk3000, .homeimprov
   height 14em
