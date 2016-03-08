@@ -101,6 +101,8 @@ p
   font-family 'nb_international_mono-webfont', monospace;
   font-kerning: normal;
   // text-align center 
+  margin 0
+  padding 0
     
   line-height 1.3em
   a
@@ -569,101 +571,53 @@ hr.splitterWithText
   // height 14em
   // margin-bottom 3.1em
   margin-bottom 1.5em
-
+  
+#shifter
+  overflow hidden
 
 .gameBox
-  // transition: all .5s ease
   span(1)
-  // transition: all .5s ease
+  
+  // // *zoom: 1;
+  // float: left;
+  // // clear: none;
+  // text-align: inherit;
+  // width: 100%;
+  // margin-left: 0%;
+  // margin-right: 0%;
+
   position relative
   height 12em
-  // background-color #FFF 
-  // margin-bottom 1em
-  // margin-right 1em
-  // margin-left 1em
   z-index 0
-    
   img
     position relative
     align(both)
-    // max-width 75%
     max-height 80%
     width auto
+    
   img.oneHundred
     position relative
     align(both)
-    // max-width 75%
     max-height 100%
     width auto
 
 .projectDetails
-  // transition: all .5s ease
-  span(0)
-  // display none
-  position relative
-  // background-color #030303
-  background-color #FFF
-  color #3333d3
-  // color #FFF
-  text-align left
-  height 12em 
+  // span(0)
   
-  p
-    padding-left 1em 
-    text-align left
-    line-height 1.2em  
-    // opacity 0
-    
-  a
-    &:link 
-      // color: link
-      color: #3333d3
-      // text-decoration none
-      font-weight normal 
-      background-image: none
-      // border-bottom: 1px solid link;
-      
-    &:hover 
-      // color: linkhover
-      color: #3333d3
-      background-image: none
-      // border-bottom: 1px solid linkhover;
-    &:visited 
-      // color: linkvisited
-      color: #3333d3
-    &:active 
-      // color: linkactive
-      color: #3333d3
-      
-
-#shifter
-  overflow hidden
+  // *zoom: 1;
+  // // float: left;
+  // // clear: none;
+  // text-align: inherit;
+  width: 0%;
+  // margin-left: 0%;
+  // margin-right: 0%;
   
-.wherethewaterGamebox, .gonehomeGamebox, .rk3000Gamebox, .homeimprovGamebox
-  span(1)
-  position relative
-  height 12em
-  z-index 0
-  img
-    position relative
-    align(both)
-    max-height 80%
-    width auto
-    
-  img.oneHundred
-    position relative
-    align(both)
-    max-height 100%
-    width auto
-
-.wherethewaterProjectDetails, .gonehomeProjectDetails, .rk3000ProjectDetails, .homeimprovProjectDetails
-  span(0)
   // width: 0%
   // opacity 0
   
-  // display flex
-  // flex-direction: column
-  // justify-content: space-between
+  display flex
+  flex-direction: column
+  justify-content: space-between
 
   position relative
   background-color #FFF
@@ -678,6 +632,8 @@ hr.splitterWithText
     text-align left
     font-size 1.1em
     line-height 1.3em  
+    padding-top 0.5em
+    padding-bottom 0.5em
     // opacity 0
       
     +below(600px)
@@ -704,7 +660,6 @@ hr.splitterWithText
     &:active 
       // color: linkactive
       color: #3333d3
-
 
     
 .wherethewater, .gonehome, .rk3000, .homeimprov
