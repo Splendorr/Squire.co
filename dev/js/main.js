@@ -44,69 +44,102 @@ var openedProjectDetailsWidth = "75%"
 
 var openedwherethewater = false;
 
-var wherethewaterDetails = new TimelineMax({paused:true});
-wherethewaterDetails.to($(".wherethewaterProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
-.to($(".wherethewaterProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".wherethewaterProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
+var gameBoxSlider = new Object(); 
+gameBoxSlider = function(projectDetails, gameBox, clickElement){   
+  var tl = new TimelineMax({paused:true}) 
+    .to($(projectDetails), 0.7, { width:openedProjectDetailsWidth}, "half")
+    .to($(projectDetails), 0.5, { width:"0%"}, "zero")
+    .to($(projectDetails), 0.5, { width:openedProjectDetailsWidth}, "halfAgain"); 
 
-var wherethewaterImage = new TimelineMax({paused:true});
-wherethewaterImage.to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "half")
-  .to($(".wherethewaterGamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "halfAgain");
+  var tl2 = new TimelineMax({paused:true}) 
+    .to($(gameBox), 0.6, { width: openedGameboxWidth}, "half")
+    .to($(gameBox), 0.6, { width:"100%"}, "full")
+    .to($(gameBox), 0.6, { width: openedGameboxWidth}, "halfAgain");
 
-$( ".wherethewater" ).click(function() {
-  if ( openedwherethewater == true ) {
-    console.log("gowherethewaterImage")
-    wherethewaterImage.tweenFromTo("full", "halfAgain");
-    wherethewaterDetails.tweenFromTo("zero", "halfAgain")
-    // wherethewaterDetails.reverse();
-    openedwherethewater = false;
-    console.log('set wherethewater 100' + openedwherethewater);
-  }
-  else {
-    console.log("gowherethewaterDetails")
-    wherethewaterImage.tweenFromTo("half", "full");
-    wherethewaterDetails.tweenFromTo("half", "zero");
-    // wherethewaterDetails.play(0);
-    openedwherethewater = true;
-    console.log('set wherethewater 50' + openedwherethewater);
-  };
-  console.log('clicked wherethewater');
-});
+
+  $( clickElement ).click(function() {
+    if ( openedwherethewater == true ) {
+      tl2.tweenFromTo("full", "halfAgain");
+      tl.tweenFromTo("zero", "halfAgain")
+      openedwherethewater = false;
+    }
+    else {
+      tl2.tweenFromTo("half", "full");
+      tl.tweenFromTo("half", "zero");
+      openedwherethewater = true;
+    };
+    console.log('set ' + clickElement + ' to ' + openedwherethewater);
+  });
+
+  return [tl, tl2];
+}
+
+gameBoxSlider(".wherethewaterProjectDetails", ".wherethewaterGamebox", ".wherethewater");
+gameBoxSlider(".gonehomeProjectDetails", ".gonehomeGamebox", ".gonehome");
+
+// var wherethewaterDetails = new TimelineMax({paused:true});
+// wherethewaterDetails.to($(".wherethewaterProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
+// .to($(".wherethewaterProjectDetails"), 0.5, { width:"0%"}, "zero")
+// .to($(".wherethewaterProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
+
+// var wherethewaterImage = new TimelineMax({paused:true});
+// wherethewaterImage.to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "half")
+//   .to($(".wherethewaterGamebox"), 0.6, { width:"100%"}, "full")
+//   .to($(".wherethewaterGamebox"), 0.6, { width: openedGameboxWidth}, "halfAgain");
+
+// $( ".wherethewater" ).click(function() {
+//   if ( openedwherethewater == true ) {
+//     console.log("gowherethewaterImage")
+//     wherethewaterImage.tweenFromTo("full", "halfAgain");
+//     wherethewaterDetails.tweenFromTo("zero", "halfAgain")
+//     // wherethewaterDetails.reverse();
+//     openedwherethewater = false;
+//     console.log('set wherethewater 100' + openedwherethewater);
+//   }
+//   else {
+//     console.log("gowherethewaterDetails")
+//     wherethewaterImage.tweenFromTo("half", "full");
+//     wherethewaterDetails.tweenFromTo("half", "zero");
+//     // wherethewaterDetails.play(0);
+//     openedwherethewater = true;
+//     console.log('set wherethewater 50' + openedwherethewater);
+//   };
+//   console.log('clicked wherethewater');
+// });
 // end wherethewater
 
 // gonehome
 var openedgonehome = false;
 
-var gonehomeDetails = new TimelineMax({paused:true});
-gonehomeDetails.to($(".gonehomeProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
-.to($(".gonehomeProjectDetails"), 0.5, { width:"0%"}, "zero")
-.to($(".gonehomeProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
+// var gonehomeDetails = new TimelineMax({paused:true});
+// gonehomeDetails.to($(".gonehomeProjectDetails"), 0.7, { width:openedProjectDetailsWidth}, "half")
+// .to($(".gonehomeProjectDetails"), 0.5, { width:"0%"}, "zero")
+// .to($(".gonehomeProjectDetails"), 0.5, { width:openedProjectDetailsWidth}, "halfAgain");
 
-var gonehomeImage = new TimelineMax({paused:true});
-gonehomeImage.to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "half")
-  .to($(".gonehomeGamebox"), 0.6, { width:"100%"}, "full")
-  .to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "halfAgain");
+// var gonehomeImage = new TimelineMax({paused:true});
+// gonehomeImage.to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "half")
+//   .to($(".gonehomeGamebox"), 0.6, { width:"100%"}, "full")
+//   .to($(".gonehomeGamebox"), 0.6, { width:openedGameboxWidth}, "halfAgain");
 
-$( ".gonehome" ).click(function() {
-  if ( openedgonehome == true ) {
-    console.log("gogonehomeImage")
-    gonehomeImage.tweenFromTo("full", "halfAgain");
-    gonehomeDetails.tweenFromTo("zero", "halfAgain")
-    // gonehomeDetails.reverse();
-    openedgonehome = false;
-    console.log('set gonehome 100' + openedgonehome);
-  }
-  else {
-    console.log("gogonehomeDetails")
-    gonehomeImage.tweenFromTo("half", "full");
-    gonehomeDetails.tweenFromTo("half", "zero");
-    // gonehomeDetails.play(0);
-    openedgonehome = true;
-    console.log('set gonehome 50' + openedgonehome);
-  };
-  console.log('clicked gonehome');
-});
+// $( ".gonehome" ).click(function() {
+//   if ( openedgonehome == true ) {
+//     console.log("gogonehomeImage")
+//     gonehomeImage.tweenFromTo("full", "halfAgain");
+//     gonehomeDetails.tweenFromTo("zero", "halfAgain")
+//     // gonehomeDetails.reverse();
+//     openedgonehome = false;
+//     console.log('set gonehome 100' + openedgonehome);
+//   }
+//   else {
+//     console.log("gogonehomeDetails")
+//     gonehomeImage.tweenFromTo("half", "full");
+//     gonehomeDetails.tweenFromTo("half", "zero");
+//     // gonehomeDetails.play(0);
+//     openedgonehome = true;
+//     console.log('set gonehome 50' + openedgonehome);
+//   };
+//   console.log('clicked gonehome');
+// });
 // end gonehome
 
 // rk3000
