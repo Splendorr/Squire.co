@@ -207,14 +207,20 @@ p.tagline
 
 p.secondline, .contactlinks, .newsletter   
   // margin-top 1.6rem
-  margin-top 4.7%
+  margin-top 4.4%
   margin-bottom 0
   padding-bottom 0
   +below(600px)
     margin-top 2em 
 
 p.secondline
-  font-size 1em
+  font-size 1.2em
+  
+  +below(1400px)
+    font-size 1.1em 
+  
+  +below(600px)
+    font-size 1em 
    
   // col(3/4)
   // shift(1/4)
