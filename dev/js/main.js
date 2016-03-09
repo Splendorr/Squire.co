@@ -50,17 +50,23 @@ $(".logotriangle").click(function(){
   // var $this = $(this),
   //     $content = $this.find(".content");
   if(!$(".expander").hasClass("closed")){
-    TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
+    // TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
+    TweenLite.to($(".content"), 1, {height:0})
     $(".expander").addClass("closed")
   }else{
     //to open
     // - temporarilty set height:auto
     // - tween from height:0
-    TweenLite.set($(".content"), {height:"auto", paddingTop:"1.5em"})
+    TweenLite.set($(".content"), {height:"auto"})
     TweenLite.from($(".content"), 1, {height:0})
     $(".expander").removeClass("closed");
   }
 })
+
+var tlTriangleBob = new TimelineMax({repeat:"yoyo"})
+  .to($('.logotriangle'), 2, {y:"8px"})
+  .to($('.logotriangle'), 2, {y:"0px"});
+
 
 var openedGameBoxWidth = "25%";
 var openedProjectDetailsWidth = "75%"

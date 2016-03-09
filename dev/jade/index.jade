@@ -11,7 +11,8 @@ block content
       .clearfix
         .toprow
           .squirelogoleft
-            a(id="top")
+            //- .logocontainer
+            //- a(id="top")
             a(href="#")
               img(src="img/squirelogocropped.svg", alt="Squire Logo")
             //- #animate
@@ -382,7 +383,7 @@ block content
 
       // change behaviour of controller to animate scroll instead of jump
       controller.scrollTo(function (newpos) {
-        TweenMax.to(window, 3, {scrollTo: {y: newpos}});
+        TweenMax.to(window, 2.5, {scrollTo: {y: newpos}});
       });
 
       //  bind scroll to anchor links
