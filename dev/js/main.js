@@ -63,9 +63,20 @@ $(".logotriangle").click(function(){
   }
 })
 
-var tlTriangleBob = new TimelineMax({repeat:"yoyo"})
-  .to($('.logotriangle'), 2, {y:"8px"})
-  .to($('.logotriangle'), 2, {y:"0px"});
+var tlTriangleBob = new TimelineMax({repeat:"yoyo", repeatDelay:.5})
+  .to($('.logotriangle'), 2, {y:"8pt"})
+  .to($('.logotriangle'), 2, {y:"0pt"});
+
+var tlTriangleGrow = new TimelineMax({paused:true})
+  .to($('.logotriangle'), .5, {scaleX:1.1, scaleY:1.1});
+
+$(".logotriangle" ).mouseenter(function() {
+    tlTriangleGrow.play();
+});
+
+$(".logotriangle" ).mouseleave(function() {
+    tlTriangleGrow.reverse();
+});
 
 
 var openedGameBoxWidth = "25%";
