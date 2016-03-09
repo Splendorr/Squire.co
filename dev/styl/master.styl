@@ -571,12 +571,41 @@ hr.splitterWithText
   width 96px
   height auto 
   margin-bottom 2em
+  margin-top 2em
+  
+.invisiblelink
+  // display none
+  
+.bottomspacer
+  padding-top 1000px
    
 
 .gamelist
   // transition: all .5s ease
   cf()
   // padding-top 1em
+    
+#concealer
+  overflow hidden 
+  // display flex
+  height: 0
+  // display none
+    
+.expander {
+  // width:300px;
+  // border:solid 1px #555;
+  border-top 5px solid white 
+  border-bottom 5px solid white
+  margin-top 0.5em
+  // padding:10px;
+  // margin:10px;
+  // cursor:pointer;
+}
+.content{
+  overflow:hidden;
+  height 0
+  // padding-top 1.5em
+}
     
 .onehalf
   col(1/2, gutter: 1.3, cycle: 2)

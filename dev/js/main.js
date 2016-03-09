@@ -21,6 +21,47 @@ console.log('priming');
 // var openedGameBoxWidth = "35.75%";
 // var openedProjectDetailsWidth = "64.25%"
 
+
+
+// var concealearOpened = false;
+
+// var tlconcealer = new TimelineMax({paused:true}) 
+//     .to($("#concealer"), 1, { height: "100%" }, "half")
+//     // .to(window, 2, {scrollTo:{y:700}, ease:Power2.easeOut}, "half")
+//     .to($("#concealer"), 1, { height: 0 }, "zero")
+//     .to($("#concealer"), 1, { height: "100%" }, "halfAgain");
+
+// $( ".logotriangle" ).click(function() {
+//   if ( concealearOpened == true ) {
+//     // tl2.tweenFromTo("full", "halfAgain");
+//     tlconcealer.tweenFromTo("zero", "halfAgain");
+//     concealearOpened = false;
+//   }
+//   else {
+//     // tlconcealer2.tweenFromTo("half", "full");
+//     tlconcealer.tweenFromTo("half", "zero");
+//     concealearOpened = true;
+//   };
+//   console.log('set #concealer to ' + concealearOpened);
+// });
+
+
+$(".logotriangle").click(function(){
+  // var $this = $(this),
+  //     $content = $this.find(".content");
+  if(!$(".expander").hasClass("closed")){
+    TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
+    $(".expander").addClass("closed")
+  }else{
+    //to open
+    // - temporarilty set height:auto
+    // - tween from height:0
+    TweenLite.set($(".content"), {height:"auto", paddingTop:"1.5em"})
+    TweenLite.from($(".content"), 1, {height:0})
+    $(".expander").removeClass("closed");
+  }
+})
+
 var openedGameBoxWidth = "25%";
 var openedProjectDetailsWidth = "75%"
 

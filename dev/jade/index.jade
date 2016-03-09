@@ -11,8 +11,12 @@ block content
       .clearfix
         .toprow
           .squirelogoleft
+            a(id="top")
             a(href="#")
               img(src="img/squirelogocropped.svg", alt="Squire Logo")
+            //- #animate
+            //-   a(href="#bottomlol")
+            //-     h3 TEST
           .topcopy
             p.tagline Squire is a video game company that produces & promotes great games.
 
@@ -180,8 +184,7 @@ block content
           //-     p Home Improvisation
       //- img.triangle(src="img/triangle192.png", alt="A triangle")
       
-      a(href="#")
-        img.logotriangle(src="img/squirelogoTriangle.svg", alt="Squire Logo")
+      
 
       //- .currentProjects.clearfix
       //-   .pastProjectsLineOne
@@ -191,168 +194,210 @@ block content
       //-   .pastProjectsLineTwo
       //-     hr#games.splitterWithText
 
-      .gamelist.part3              
-        .onethird
-          .whiteBorder
-            #shifter
-              .delversdrop.gameBox
-                img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
-              .delversdrop.projectDetails
-                div
-                  p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
+      a.invisiblelink(id="bottomlol")
+      .gamelist.part3          
+        .expander.closed
+          .content
+            .onethird
+              .whiteBorder
+                #shifter
+                  .delversdrop.gameBox
+                    img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
+                  .delversdrop.projectDetails
+                    div
+                      p 
+                        | DEVELOPER: TK
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
 
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/delversdrop") @delversdrop]
-                    br
-                    | web: #[a(href="http://delversdrop.com/") delversdrop.com]
-          //- .role
-          //-   //- p Marketing/PR
-          //-   p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
-          //-   //- .gamename
-          //-     //- p Delver's Drop
-        .onethird
-          .whiteBorder
-            #shifter
-              .brigador.gameBox
-                //- img(src="img/brigador-title.png", alt="Brigador")
-              .brigador.projectDetails
-                div
-                  //- h3 BRIGADOR
-                  p 
-                    | DEVELOPER: Gausswerks
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
-
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/hughsj") @hughsj] #[a(href="http://twitter.com/gausswerks") @gausswerks]
-                    br
-                    | web: #[a(href="http://stellarjockeys.com/") stellarjockeys.com]
-          //- .role
-          //-   //- p Marketing/PR
-          //-   p #[a(href="http://twitter.com/HughSJ") @hughsj] &bull; #[a(href="http://twitter.com/gausswerks") @gausswerks]
-        .onethird
-          .whiteBorder
-            #shifter
-              //-   a(href="http://pioneersgame.com/")
-              .pioneersGradient
-                .pioneers.gameBox
-                  //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
-              .pioneers.projectDetails
-                div
-                  //- h3 BRIGADOR
-                  p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
-
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/pioneersgame") @pioneersgame] #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
-                    br
-                    | web: #[a(href="http://pioneersgame.com/") pioneersgame.com]
-          //- .role
-          //-   //- p Marketing/PR
-          //-   p #[a(href="http://twitter.com/pioneersgame") @pioneersgame] &bull; #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
-          //-   //- .gamename
-          //-     p Pioneers
-        .onethird
-          .whiteBorder
-            #shifter
-              //- a(href="http://www.balloonandfriends.com/borumo")
-              .borumo.gameBox
-                //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
-              .borumo.projectDetails
-                div
-                  //- h3 BRIGADOR
-                  p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
-
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
-                    br
-                    | web: #[a(href="http://balloonandfriends.com/borumo") balloonandfriends.com/borumo]
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/delversdrop") @delversdrop]
+                        br
+                        | web: #[a(href="http://delversdrop.com/") delversdrop.com]
               //- .role
               //-   //- p Marketing/PR
-              //-   p #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
+              //-   p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
               //-   //- .gamename
-              //-     p Boru Mo
+              //-     //- p Delver's Drop
+            .onethird
+              .whiteBorder
+                #shifter
+                  .brigador.gameBox
+                    //- img(src="img/brigador-title.png", alt="Brigador")
+                  .brigador.projectDetails
+                    div
+                      //- h3 BRIGADOR
+                      p 
+                        | DEVELOPER: Gausswerks
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/hughsj") @hughsj] #[a(href="http://twitter.com/gausswerks") @gausswerks]
+                        br
+                        | web: #[a(href="http://stellarjockeys.com/") stellarjockeys.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/HughSJ") @hughsj] &bull; #[a(href="http://twitter.com/gausswerks") @gausswerks]
+            .onethird
+              .whiteBorder
+                #shifter
+                  //-   a(href="http://pioneersgame.com/")
+                  .pioneersGradient
+                    .pioneers.gameBox
+                      //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
+                  .pioneers.projectDetails
+                    div
+                      //- h3 BRIGADOR
+                      p 
+                        | DEVELOPER: TK
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/pioneersgame") @pioneersgame] #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
+                        br
+                        | web: #[a(href="http://pioneersgame.com/") pioneersgame.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/pioneersgame") @pioneersgame] &bull; #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
+              //-   //- .gamename
+              //-     p Pioneers
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://www.balloonandfriends.com/borumo")
+                  .borumo.gameBox
+                    //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
+                  .borumo.projectDetails
+                    div
+                      //- h3 BRIGADOR
+                      p 
+                        | DEVELOPER: TK
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
+                        br
+                        | web: #[a(href="http://balloonandfriends.com/borumo") balloonandfriends.com/borumo]
+                  //- .role
+                  //-   //- p Marketing/PR
+                  //-   p #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
+                  //-   //- .gamename
+                  //-     p Boru Mo
+            
+          
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://ratcasket.com/")
+                  .kerfuffle.gameBox
+                    img.oneHundred(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
+                  .kerfuffle.projectDetails
+                    div
+                      //- h3 BRIGADOR
+                      p 
+                        | DEVELOPER: TK
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/ratcasket") @ratcasket]
+                        br
+                        | web: #[a(href="http://ratcasket.com") ratcasket.com]
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://mushroom11.com/")
+                  .mushroom11.gameBox
+                    img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
+                  .mushroom11.projectDetails
+                    div
+                      //- h3 BRIGADOR
+                      p 
+                        | DEVELOPER: TK
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/untamegames") @untamegames]
+                        br
+                        | web: #[a(href="http://mushroom11.com") mushroom11.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/untamegames") @untamegames]
+              //-   //- .gamename
+              //-     p Mushroom 11
         
-      
-        .onethird
-          .whiteBorder
-            #shifter
-              //- a(href="http://ratcasket.com/")
-              .kerfuffle.gameBox
-                img.oneHundred(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
-              .kerfuffle.projectDetails
-                div
-                  //- h3 BRIGADOR
-                  p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
 
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/ratcasket") @ratcasket]
-                    br
-                    | web: #[a(href="http://ratcasket.com") ratcasket.com]
-        .onethird
-          .whiteBorder
-            #shifter
-              //- a(href="http://mushroom11.com/")
-              .mushroom11.gameBox
-                img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
-              .mushroom11.projectDetails
-                div
-                  //- h3 BRIGADOR
-                  p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
-                  p 
-                    | + Production
-                    br
-                    | + Promotion
 
-                div
-                  p 
-                    | twitter: #[a(href="http://twitter.com/untamegames") @untamegames]
-                    br
-                    | web: #[a(href="http://mushroom11.com") mushroom11.com]
-          //- .role
-          //-   //- p Marketing/PR
-          //-   p #[a(href="http://twitter.com/untamegames") @untamegames]
-          //-   //- .gamename
-          //-     p Mushroom 11
+        //- p.bottomspacer bottom
+        a(href="#bottomlol")
+          img.logotriangle(src="img/squirelogoTriangle.svg", alt="Squire Logo")
+        //- a(id="bottomlol")
 
-        
+  script
+    // init controller
+      var controller = new ScrollMagic.Controller();
+
+      // build tween
+      //- var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+
+      // build scene
+      //- var scene = new ScrollMagic.Scene({triggerElement: "a#top", duration: 200, triggerHook: "onLeave"})
+      //-         .setTween(tween)
+      //-         .addIndicators() // add indicators (requires plugin)
+      //-         .addTo(controller);
+
+      // change behaviour of controller to animate scroll instead of jump
+      controller.scrollTo(function (newpos) {
+        TweenMax.to(window, 3, {scrollTo: {y: newpos}});
+      });
+
+      //  bind scroll to anchor links
+      $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+          e.preventDefault();
+
+          // trigger scroll
+          controller.scrollTo(id);
+
+            // if supported by the browser we can even update the URL.
+          if (window.history && window.history.pushState) {
+            history.pushState("", document.title, id);
+          }
+        }
+      });
         
