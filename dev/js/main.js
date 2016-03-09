@@ -45,20 +45,30 @@ console.log('priming');
 //   console.log('set #concealer to ' + concealearOpened);
 // });
 
+var tlTriangleSpin = new TimelineMax({paused:true})
+  .to($('.logotriangle'), 0.25, {rotationX: "+=180"});
+
+function flipTriangle () {
+  tlTriangleSpin.play();
+}
+
+function flipTriangleBack () {
+  tlTriangleSpin.reverse();
+}
 
 $(".logotriangle").click(function(){
   // var $this = $(this),
   //     $content = $this.find(".content");
   if(!$(".expander").hasClass("closed")){
     // TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
-    TweenLite.to($(".content"), 1, {height:0})
+    TweenLite.to($(".content"), 1, {height:0, onComplete:flipTriangleBack});
     $(".expander").addClass("closed")
   }else{
     //to open
     // - temporarilty set height:auto
     // - tween from height:0
-    TweenLite.set($(".content"), {height:"auto"})
-    TweenLite.from($(".content"), 1, {height:0})
+    TweenLite.set($(".content"), {height:"auto"});
+    TweenLite.from($(".content"), 1, {height:0, onComplete:flipTriangle});
     $(".expander").removeClass("closed");
   }
 })
@@ -110,7 +120,18 @@ gameBoxSlider = function(clickElement, openVariable){
     console.log('set ' + clickElement + ' to ' + openVariable);
   });
 
-  return [tl, tl2];
+  var tl3 = new TimelineMax({paused:true}) 
+    .to($(clickElement + ".gameBox"), 0.5, { x: "-5px"});
+
+  $(clickElement + ".gameBox").mouseenter(function() {
+      tl3.play();
+  });
+
+  $(clickElement + ".gameBox").mouseleave(function() {
+      tl3.reverse();
+  });
+
+  return [tl, tl2, tl3];
 }
 
 var openedwherethewater = false;
