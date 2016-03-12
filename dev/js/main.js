@@ -125,16 +125,49 @@ gameBoxSlider = function(clickElement, openVariable){
   var tl3 = new TimelineMax({paused:true}) 
     .to($(clickElement + ".gameBox"), 0.2, { x: "-10px"});
 
+  // var tl4 = new TimelineMax({paused:true}) 
+  //   .to($(clickElement + ".gameBox"), 0.2, { x: "10px"});
+
   $(clickElement + ".gameBox").mouseenter(function() {
+    if ( openVariable == true ) {
       tl3.play();
+    } else {
+      tl3.play();
+    }
   });
 
   $(clickElement + ".gameBox").mouseleave(function() {
+    if ( openVariable == true ) {
       tl3.reverse();
+    } else {
+      tl3.reverse();
+    }
   });
 
   return [tl, tl2, tl3];
 }
+
+// var logoshield = document.getElementById("#logoshield");
+
+var initialLogoDelay = 1.25;
+var logoClickHalf = .1;
+var logoClickScale = 0.95
+var initialLogoSpeed = 1.25;
+
+var textmove = new TimelineMax({delay: initialLogoDelay + ( logoClickHalf *2 )})
+  .set($("#logotext"), {x: -800})
+  .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
+
+var shieldmove = new TimelineMax({delay: initialLogoDelay})
+  .set($("#logoshield"), {x: 778})
+  .to($("#logoshield"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
+  .to($("#logoshield"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"})
+  .to($("#logoshield"), initialLogoSpeed, {x: 0});//Works
+
+// var topcopyReveal = new TimelineMax({delay: 3})
+//   .set($(".topcopy"), {opacity: 0})
+//   .to($(".topcopy"), 1, {opacity: 1});//Works
+
 
 var openedwherethewater = false;
 gameBoxSlider(".wherethewater", openedwherethewater);

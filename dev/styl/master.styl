@@ -81,12 +81,17 @@ a
  
 
 // SVG fix for IE 
-img 
+img
   width: 100%
 
 img, svg
   max-width 100%
   // display: block
+    
+svg
+  width 100%
+  height auto
+  
     
 #contentwidth
   // center(100%, 15%)
@@ -188,6 +193,9 @@ p
   // margin-top 2.6rem
   margin-top 5.1%
   
+  +below(1440px)
+    margin-top 4.3%
+  
   +below(1100px)
     col(12/16, offset: 2/16, gutter: 1.3)
 
@@ -212,7 +220,7 @@ p.tagline
   +below(1440px)
     // text-align left
     font-size 1.3em 
-    line-height 1.3em
+    line-height 1.2em
   
   +below(600px)
     // text-align left
