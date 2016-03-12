@@ -45,8 +45,8 @@ console.log('priming');
 //   console.log('set #concealer to ' + concealearOpened);
 // });
 
-var tlTriangleSpin = new TimelineMax({paused:true})
-  .to($('.logotriangle'), 0.25, {rotationX: "+=180"});
+var tlTriangleSpin = new TimelineMax({paused:true, delay: 0.5})
+  .to($('.logotriangle'), 0.75, {rotationX: "+=180"});
 
 function flipTriangle () {
   tlTriangleSpin.play();
@@ -61,21 +61,23 @@ $(".logotriangle").click(function(){
   //     $content = $this.find(".content");
   if(!$(".expander").hasClass("closed")){
     // TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
-    TweenLite.to($(".content"), 1, {height:0, onComplete:flipTriangleBack});
+    TweenLite.to($(".content"), 1, {height:0});
+    tlTriangleSpin.reverse();
     $(".expander").addClass("closed")
   }else{
     //to open
     // - temporarilty set height:auto
     // - tween from height:0
     TweenLite.set($(".content"), {height:"auto"});
-    TweenLite.from($(".content"), 1, {height:0, onComplete:flipTriangle});
+    TweenLite.from($(".content"), 1, {height:0});
+    tlTriangleSpin.play();
     $(".expander").removeClass("closed");
   }
 })
 
-var tlTriangleBob = new TimelineMax({repeat:"yoyo", repeatDelay:.5})
-  .to($('.logotriangle'), 2, {y:"8pt"})
-  .to($('.logotriangle'), 2, {y:"0pt"});
+var tlTriangleBob = new TimelineMax({repeat:"yoyo", repeatDelay:.25})
+  .to($('.logotriangle'), 1.25, {y:"8pt"})
+  .to($('.logotriangle'), 1.25, {y:"0pt"});
 
 var tlTriangleGrow = new TimelineMax({paused:true})
   .to($('.logotriangle'), .5, {scaleX:1.1, scaleY:1.1});
@@ -121,7 +123,7 @@ gameBoxSlider = function(clickElement, openVariable){
   });
 
   var tl3 = new TimelineMax({paused:true}) 
-    .to($(clickElement + ".gameBox"), 0.5, { x: "-5px"});
+    .to($(clickElement + ".gameBox"), 0.2, { x: "-10px"});
 
   $(clickElement + ".gameBox").mouseenter(function() {
       tl3.play();

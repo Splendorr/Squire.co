@@ -208,6 +208,11 @@ p.tagline
   margin-top 0
   margin-bottom 0
   // padding-bottom 0
+    
+  +below(1440px)
+    // text-align left
+    font-size 1.3em 
+    line-height 1.3em
   
   +below(600px)
     // text-align left
@@ -215,25 +220,28 @@ p.tagline
     line-height 1.3em
     // padding-bottom 1em  
 
-p.secondline, .contactlinks, .newsletter   
-  // margin-top 1.6rem
-  margin-top 4.4%
-  margin-bottom 0
-  padding-bottom 0
-  +below(600px)
-    margin-top 2em 
-
 p.secondline
   font-size 1.2em
   
-  +below(1400px)
-    font-size 1.1em 
+  +below(1440px)
+    font-size 1em 
   
   +below(600px)
     font-size 1em 
    
   // col(3/4)
   // shift(1/4)
+
+p.secondline, .contactlinks, .newsletter   
+  // margin-top 1.6rem
+  margin-top 4.4%
+  margin-bottom 0
+  padding-bottom 0
+  +below(1440px)
+    margin-top 1em 
+  +below(600px)
+    margin-top 2em 
+
    
     
 .contactlinks
