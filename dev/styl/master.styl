@@ -91,6 +91,7 @@ img, svg
 svg
   width 100%
   height auto
+  max-height 100%
   
     
 #contentwidth
@@ -167,6 +168,7 @@ p
   // col(1/3, offset: 1/6)
   // col(3/6, gutter: 1.3)
   // col(3/6, offset: 1/12, gutter: 1.3)
+  // box-sizing:border-box
   col(8/16, gutter: 1.3)
   // align(both)
   // unstack()
@@ -175,8 +177,8 @@ p
   +below(1100px)
     col(12/16, offset: 2/16, gutter: 1.3)
   +below(600px)
-    // col(1)
-    col(9/10)
+    col(1)
+    // col(9/10)
     // center(90%)
 
 .topcopy
@@ -429,7 +431,7 @@ input#mce-EMAIL
   // padding-right -1em !important
 
 input#mc-embedded-subscribe.button
-  transition: all .5s ease
+  transition: all .1s ease
   // button: gray 'medium'
   // background-color #C0C0C0 
   background-color #FFF 

@@ -2,6 +2,15 @@
 
 console.log('priming');
 
+//touch click helper
+(function ($) {
+    $.fn.tclick = function (onclick) {
+        this.bind("touchstart", function (e) { onclick.call(this, e); e.stopPropagation(); e.preventDefault(); });
+        this.bind("mousedown", function (e) { onclick.call(this, e); });   //substitute mousedown event for exact same result as touchstart         
+        return this;
+    };
+})(jQuery);
+
 // var gameBoxes = [
 //   'wtw', // Slide 0
 //   'gonehome', // Slide 1
@@ -149,20 +158,94 @@ gameBoxSlider = function(clickElement, openVariable){
 
 // var logoshield = document.getElementById("#logoshield");
 
-var initialLogoDelay = 1.25;
-var logoClickHalf = .1;
+// var initialLogoDelay = 1.25;
+var logoClickHalf = 0.01;
+var logoClickHold = 0.1;
 var logoClickScale = 0.95
 var initialLogoSpeed = 1.25;
 
-var textmove = new TimelineMax({delay: initialLogoDelay + ( logoClickHalf *2 )})
-  .set($("#logotext"), {x: -800})
-  .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
+var logoOpener = new Object();
+
+var hasLogoOpened = false;
+var logoOpened = true;
+
+logoOpener = function (initialLogoDelay) {
+
+  var textmove = new TimelineMax({delay: initialLogoDelay + ( logoClickHalf *2 ) + (logoClickHold *2 )});
+
+  var shieldmove = new TimelineMax({delay: initialLogoDelay});
+
+  logoOpenFunction = function (whatToClick) {
+    textmove
+      // .set($("#logotext"), {x: -800})
+      .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
+
+    shieldmove
+      // .set($("#logoshield"), {x: 778})
+      .to($(whatToClick), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
+      .to($(whatToClick), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
+      .to($("#logoshield"), initialLogoSpeed, {x: 0}, "+=" + logoClickHold);//Works
+  };
+
+  if ( hasLogoOpened == false ) {
+      textmove
+        .set($("#logotext"), {x: -800})
+
+      shieldmove
+        .set($("#logoshield"), {x: 778})
+
+      logoOpenFunction("#logoshield")
+
+      hasLogoOpened = true;
+      console.log("opening logo for the first time");
+
+  } else {
+    textmove
+      // .set($("#logotext"), {x: -800})
+      .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
+
+    shieldmove
+      // .set($("#logoshield"), {x: 778})
+      .to($("#Layer_1"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
+      .to($("#Layer_1"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
+      .to($("#logoshield"), initialLogoSpeed, {x: 0}, "+=" + logoClickHold);//Works
+    console.log("opening logo again");
+
+  }
+
+}; // End logoOpener()
+
+var logoCloser = new Object();
+logoCloser = function (initialLogoDelay) {
+var textmove = new TimelineMax({delay: initialLogoDelay + ( logoClickHalf *2 ) + (logoClickHold * 2 )})
+  // .set($("#logotext"), {x: 0})
+  .to($("#logotext"), initialLogoSpeed, {x: -800});//Works
 
 var shieldmove = new TimelineMax({delay: initialLogoDelay})
-  .set($("#logoshield"), {x: 778})
-  .to($("#logoshield"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
-  .to($("#logoshield"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"})
-  .to($("#logoshield"), initialLogoSpeed, {x: 0});//Works
+  // .set($("#logoshield"), {x: 778})
+  .to($("#Layer_1"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
+  .to($("#Layer_1"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
+  .to($("#logoshield"), initialLogoSpeed, {x: 778}, "+=" + logoClickHold);//Works
+};
+
+
+
+logoOpener(1.25);
+// logoCloser();
+
+$( ".squirelogoleft" ).tclick(function() {
+  if ( logoOpened == true ) {
+    logoCloser(0);
+    logoOpened = false;
+  }
+  else {
+    logoOpener(0);
+    logoOpened = true;
+  };
+  console.log('set .squirelogoleft to ' + logoOpened);
+});
+
+
 
 // var topcopyReveal = new TimelineMax({delay: 3})
 //   .set($(".topcopy"), {opacity: 0})
