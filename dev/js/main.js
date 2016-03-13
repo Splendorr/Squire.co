@@ -55,7 +55,8 @@ console.log('priming');
 // });
 
 var tlTriangleSpin = new TimelineMax({paused:true, delay: 0.5})
-  .to($('.logotriangle'), 0.75, {rotationX: "+=180"});
+  // .to($('.logotriangle'), 0.01, {y: "1em"})
+  .to($('.logotriangle'), 0.75, {rotationX: "+=180", force3D:true}, 0.5);
 
 function flipTriangle () {
   tlTriangleSpin.play();
@@ -70,26 +71,32 @@ $(".logotriangle").click(function(){
   //     $content = $this.find(".content");
   if(!$(".expander").hasClass("closed")){
     // TweenLite.to($(".content"), 1, {height:0, paddingTop:0})
-    TweenLite.to($(".content"), 1, {height:0});
+    TweenMax.to($(".content"), 1, {height:0, force3D:true, onComplete:clearBrowserState});
     tlTriangleSpin.reverse();
     $(".expander").addClass("closed")
   }else{
     //to open
     // - temporarilty set height:auto
     // - tween from height:0
-    TweenLite.set($(".content"), {height:"auto"});
-    TweenLite.from($(".content"), 1, {height:0});
+    TweenMax.set($(".content"), {height:"auto", force3D:true});
+    TweenMax.from($(".content"), 1, {height:0, force3D:true, onComplete:clearBrowserState});
     tlTriangleSpin.play();
     $(".expander").removeClass("closed");
   }
 })
+
+function clearBrowserState () {
+  if (window.history && window.history.pushState) {
+    history.replaceState("", document.title, "#");
+  }
+}
 
 var tlTriangleBob = new TimelineMax({repeat:"yoyo", repeatDelay:.25})
   .to($('.logotriangle'), 1.25, {y:"8pt"})
   .to($('.logotriangle'), 1.25, {y:"0pt"});
 
 var tlTriangleGrow = new TimelineMax({paused:true})
-  .to($('.logotriangle'), .5, {scaleX:1.1, scaleY:1.1});
+  .to($('.logotriangle'), .1, {scaleX:1.1, scaleY:1.1});
 
 $(".logotriangle" ).mouseenter(function() {
     tlTriangleGrow.play();
@@ -132,29 +139,68 @@ gameBoxSlider = function(clickElement, openVariable){
   });
 
   var tl3 = new TimelineMax({paused:true}) 
-    .to($(clickElement + ".gameBox"), 0.2, { x: "-10px"});
+    .to($(clickElement + ".gameBox"), 0.1, { x: "-10px", force3D:true });
+
+  var tl4 = new TimelineMax({paused:true}) 
+    .to($(clickElement + ".gameBox"), 0.05, { x: "0px", force3D:true });
 
   // var tl4 = new TimelineMax({paused:true}) 
   //   .to($(clickElement + ".gameBox"), 0.2, { x: "10px"});
 
   $(clickElement + ".gameBox").mouseenter(function() {
     if ( openVariable == true ) {
-      tl3.play();
+      tl3.play().timeScale(1);
     } else {
-      tl3.play();
+      tl3.play().timeScale(1);
     }
   });
 
   $(clickElement + ".gameBox").mouseleave(function() {
     if ( openVariable == true ) {
-      tl3.reverse();
+      tl3.reverse().timeScale(4);
+      // tl4.play();
     } else {
-      tl3.reverse();
+      tl3.reverse().timeScale(4);
+      // tl4.play();
     }
   });
 
   return [tl, tl2, tl3];
 }
+
+
+var openedwherethewater = false;
+gameBoxSlider(".wherethewater", openedwherethewater);
+
+var openedgonehome = false;
+gameBoxSlider(".gonehome", openedgonehome);
+
+var openedrk3000 = false;
+gameBoxSlider(".rk3000", openedrk3000);
+
+var openedhomeimprov = false;
+gameBoxSlider(".homeimprov", openedhomeimprov);
+
+var openeddelversdrop = false;
+gameBoxSlider(".delversdrop", openeddelversdrop);
+
+var openedbrigador = false;
+gameBoxSlider(".brigador", openedbrigador);
+
+var openedpioneers = false;
+gameBoxSlider(".pioneers", openedpioneers);
+
+var openedborumo = false;
+gameBoxSlider(".borumo", openedborumo);
+
+var openedkerfuffle = false;
+gameBoxSlider(".kerfuffle", openedkerfuffle);
+
+var openedmushroom11 = false;
+gameBoxSlider(".mushroom11", openedmushroom11);
+
+
+/////////// LOGO SHIELD
 
 // var logoshield = document.getElementById("#logoshield");
 
@@ -229,7 +275,6 @@ var shieldmove = new TimelineMax({delay: initialLogoDelay})
 };
 
 
-
 logoOpener(1.25);
 // logoCloser();
 
@@ -250,37 +295,6 @@ $( ".squirelogoleft" ).tclick(function() {
 // var topcopyReveal = new TimelineMax({delay: 3})
 //   .set($(".topcopy"), {opacity: 0})
 //   .to($(".topcopy"), 1, {opacity: 1});//Works
-
-
-var openedwherethewater = false;
-gameBoxSlider(".wherethewater", openedwherethewater);
-
-var openedgonehome = false;
-gameBoxSlider(".gonehome", openedgonehome);
-
-var openedrk3000 = false;
-gameBoxSlider(".rk3000", openedrk3000);
-
-var openedhomeimprov = false;
-gameBoxSlider(".homeimprov", openedhomeimprov);
-
-var openeddelversdrop = false;
-gameBoxSlider(".delversdrop", openeddelversdrop);
-
-var openedbrigador = false;
-gameBoxSlider(".brigador", openedbrigador);
-
-var openedpioneers = false;
-gameBoxSlider(".pioneers", openedpioneers);
-
-var openedborumo = false;
-gameBoxSlider(".borumo", openedborumo);
-
-var openedkerfuffle = false;
-gameBoxSlider(".kerfuffle", openedkerfuffle);
-
-var openedmushroom11 = false;
-gameBoxSlider(".mushroom11", openedmushroom11);
 
 
 

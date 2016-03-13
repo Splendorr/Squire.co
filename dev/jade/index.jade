@@ -7,12 +7,12 @@ block content
   //-   a(href="#")
   //-     img(src="img/squirelogo.svg", alt="Squire Logo")
   #contentwidth
+    //- a(id="top")
     .fullcol
       .clearfix
         .toprow
           .squirelogoleft
             //- .logocontainer
-            //- a(id="top")
             //- a(href="#")
             //- img(src="img/squirelogocropped.svg", alt="Squire Logo")
             <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="1920" height="594.053" viewBox="6.9 -516.153 1920 594.053"><g id="logotext" fill="#FFF"><path d="M783.926-333.99v228.113h228.113V-333.99H783.925zm182.978 182.978l-68.518-91.09h-68.514l68.514 91.09h-68.514v-137.03h137.03v137.03zM1423.924-333.99v228.916h45.947v-182.968h137.03v45.94h-137.03l113.658 137.028h68.514l-75.772-91.892h75.772V-333.99zM1926.9-288.043v-45.947h-228.92v228.916h228.92v-45.938h-182.974v-45.954H1926.9v-45.136h-182.974v-45.94zM1332.843-333.99h45.938v228.13h-45.937zM1240.96-151.012h-137.03V-333.99h-45.953v228.916h228.92V-333.99h-45.938zM509.87-333.99v137.024h182.974v45.954H509.87v45.938h228.92v-137.028H555.818v-45.94H738.79v-45.948H555.818z"/></g><g id="logoshield"><path fill="#3333D3" d="M-1381.73-516.153H372.844V77.9H-1381.73z" id="logotextmask"/><path fill="#FFF" d="M235.816-333.99v228.916l-45.942 45.947-45.14-45.947V-333.99H6.9v228.916L189.874 77.9l182.97-182.974V-333.99zM213.25-379.125h68.512v-45.946H213.25v-91.083H167.3v91.082H98.788v45.945h68.514z"/></g></svg>
@@ -86,26 +86,26 @@ block content
             //- a(href="#")
             #shifter
               //- .wherethewaterGamebox.wherethewater
-              .wherethewater.gameBox
+              .wherethewater.gameBox.tallBox
                 img.oneHundred(src="img/wherethewater-logo.png", alt="Where the Water Tastes Like Wine Logo")
               //- .projectDetails.concealed
               //- .wherethewaterProjectDetails
               .wherethewater.projectDetails
                 //- .wherethewaterText
                 div
-                  //- h3 WHERE THE WATER TASTES LIKE WINE
+                  h3 Where the Water Tastes Like Wine
                   p 
                     //- | GAME: Where the Water Tastes Like Wine
                     //- br
                     | DEVELOPER: Dim Bulb Games
-                    br
-                    | PLATFORMS: TBA
+                    //- br
+                    //- | PLATFORMS: TBA
                   p 
                     | + Production
                     br
                     | + Promotion
                 div
-                  p 
+                  p.devContacts
                     | twitter: #[a(href="http://twitter.com/dimbulbgames") @dimbulbgames]
                     br
                     | web: #[a(href="http://www.wtwtlw.com/") wtwtlw.com]
@@ -113,10 +113,11 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .gonehome.gameBox
+              .gonehome.gameBox.tallBox
                 img(src="img/gonehome-logo.png", alt="Gone Home Logo")
               .gonehome.projectDetails
                 div
+                  h3 GONE HOME
                   p 
                     | DEVELOPER: Fullbright
                     br
@@ -128,7 +129,7 @@ block content
                     br
                     | + Promotion
                 div
-                  p 
+                  p.devContacts
                     | twitter: #[a(href="http://twitter.com/fullbright") @fullbright]
                     br
                     | web: #[a(href="http://www.gonehomegame.com/") gonehomegame.com]
@@ -142,43 +143,45 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .rk3000.gameBox
+              .rk3000.gameBox.tallBox
                 img(src="img/rk3000-logo.png", alt="RK3000 Logo")
               .rk3000.projectDetails
                 div
+                  h3 RK3000
                   p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
+                    | DEVELOPER: René Rother
+                    //- br
+                    //- | PLATFORMS: TK
                   p 
                     | + Production
                     br
                     | + Promotion
                 div
-                  p 
+                  p.devContacts
                     | twitter: #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
                     br
-                    | web: #[a(href="http://www.tk.com/") tk.com]
+                    | web: #[a(href="http://www.primaerfunktion.de/") primaerfunktion.de]
         .onehalf
           .whiteBorder
             #shifter
-              .homeimprov.gameBox
+              .homeimprov.gameBox.tallBox
                 img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
               .homeimprov.projectDetails
                 div
+                  h3 Home Improv
                   p 
-                    | DEVELOPER: TK
-                    br
-                    | PLATFORMS: TK
+                    | DEVELOPER: The Stork Burnt Down
+                    //- br
+                    //- | PLATFORMS: TK
                   p 
                     | + Production
                     br
                     | + Promotion
                 div
-                  p 
+                  p.devContacts  
                     | twitter: #[a(href="http://twitter.com/storkburntdown") @storkburntdown]
                     br
-                    | web: #[a(href="http://www.tk.com/") tk.com]
+                    | tumblr: #[a(href="http://thestorkburntdown.tumblr.com/") thestorkburntdown]
           //- .role
           //-   //- p Marketing/PR
           //-   p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
@@ -207,17 +210,18 @@ block content
                     img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
                   .delversdrop.projectDetails
                     div
+                      h3 Delver's Drop
                       p 
-                        | DEVELOPER: TK
-                        br
-                        | PLATFORMS: TK
+                        | DEVELOPER: Pixelscopic
+                        //- br
+                        //- | PLATFORMS: TK
                       p 
                         | + Production
                         br
                         | + Promotion
 
                     div
-                      p 
+                      p.devContacts 
                         | twitter: #[a(href="http://twitter.com/delversdrop") @delversdrop]
                         br
                         | web: #[a(href="http://delversdrop.com/") delversdrop.com]
@@ -233,11 +237,11 @@ block content
                     //- img(src="img/brigador-title.png", alt="Brigador")
                   .brigador.projectDetails
                     div
-                      //- h3 BRIGADOR
+                      h3 BRIGADOR
                       p 
                         | DEVELOPER: Gausswerks
-                        br
-                        | PLATFORMS: TK
+                        //- br
+                        //- | PLATFORMS: TK
                       p 
                         | + Production
                         br
@@ -260,11 +264,11 @@ block content
                       //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
                   .pioneers.projectDetails
                     div
-                      //- h3 BRIGADOR
+                      h3 PIONEERS
                       p 
-                        | DEVELOPER: TK
-                        br
-                        | PLATFORMS: TK
+                        | DEVELOPER: Eigenlink
+                        //- br
+                        //- | PLATFORMS: TK
                       p 
                         | + Production
                         br
@@ -364,10 +368,10 @@ block content
         
 
 
-        //- p.bottomspacer bottom
         a(href="#opencontainer")
           img.logotriangle(src="img/squirelogoTriangle.svg", alt="Squire Logo")
         //- a(id="opencontainer")
+        .bottomspacer
 
   script
     // init controller
@@ -384,7 +388,7 @@ block content
 
       // change behaviour of controller to animate scroll instead of jump
       controller.scrollTo(function (newpos) {
-        TweenMax.to(window, 2.5, {scrollTo: {y: newpos}});
+        TweenMax.to(window, 2.15, {scrollTo: {y: newpos}, force3D:true});
       });
 
       //  bind scroll to anchor links
