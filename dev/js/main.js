@@ -209,6 +209,8 @@ var logoClickHalf = 0.01;
 var logoClickHold = 0.1;
 var logoClickScale = 0.95
 var initialLogoSpeed = 1.25;
+var logoSpreadEasing = "Power1.easeInOut";
+// var logoSpreadEasing = "Power0";
 
 var logoOpener = new Object();
 
@@ -224,13 +226,13 @@ logoOpener = function (initialLogoDelay) {
   logoOpenFunction = function (whatToClick) {
     textmove
       // .set($("#logotext"), {x: -800})
-      .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
+      .to($("#logotext"), initialLogoSpeed, {x: 0, ease: logoSpreadEasing});//Works
 
     shieldmove
       // .set($("#logoshield"), {x: 778})
       .to($(whatToClick), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
       .to($(whatToClick), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
-      .to($("#logoshield"), initialLogoSpeed, {x: 0}, "+=" + logoClickHold);//Works
+      .to($("#logoshield"), initialLogoSpeed, {x: 0, ease: logoSpreadEasing}, "+=" + logoClickHold);//Works
   };
 
   if ( hasLogoOpened == false ) {
@@ -240,21 +242,13 @@ logoOpener = function (initialLogoDelay) {
       shieldmove
         .set($("#logoshield"), {x: 778})
 
-      logoOpenFunction("#logoshield")
+      logoOpenFunction("#Layer_1")
 
       hasLogoOpened = true;
       console.log("opening logo for the first time");
 
   } else {
-    textmove
-      // .set($("#logotext"), {x: -800})
-      .to($("#logotext"), initialLogoSpeed, {x: 0});//Works
-
-    shieldmove
-      // .set($("#logoshield"), {x: 778})
-      .to($("#Layer_1"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
-      .to($("#Layer_1"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
-      .to($("#logoshield"), initialLogoSpeed, {x: 0}, "+=" + logoClickHold);//Works
+    logoOpenFunction("#Layer_1")
     console.log("opening logo again");
 
   }
@@ -265,13 +259,13 @@ var logoCloser = new Object();
 logoCloser = function (initialLogoDelay) {
 var textmove = new TimelineMax({delay: initialLogoDelay + ( logoClickHalf *2 ) + (logoClickHold * 2 )})
   // .set($("#logotext"), {x: 0})
-  .to($("#logotext"), initialLogoSpeed, {x: -800});//Works
+  .to($("#logotext"), initialLogoSpeed, {x: -800, ease: logoSpreadEasing});//Works
 
 var shieldmove = new TimelineMax({delay: initialLogoDelay})
   // .set($("#logoshield"), {x: 778})
   .to($("#Layer_1"), logoClickHalf, {scaleX:logoClickScale, scaleY:logoClickScale, svgOrigin:"960 0"})
   .to($("#Layer_1"), logoClickHalf, {scaleX:1, scaleY:1, svgOrigin:"960 0"}, (logoClickHalf + logoClickHold) )
-  .to($("#logoshield"), initialLogoSpeed, {x: 778}, "+=" + logoClickHold);//Works
+  .to($("#logoshield"), initialLogoSpeed, {x: 778, ease: logoSpreadEasing}, "+=" + logoClickHold);//Works
 };
 
 
