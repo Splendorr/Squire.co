@@ -3,13 +3,13 @@ block vars
   - var pageTitle = 'SQUIRE FAQ'
 
 block content
-  #squirelogo
-    a(href="index.html")
-      img(src="img/squirelogo.svg", alt="Squire Logo")
 
   #contentwidth
     .fullcol
       .faqframe
+        #squirelogo
+          a(href="index.html")
+            img(src="img/squirelogocropped.svg", alt="Squire Logo")
         p.faqtitle FAQ
         p.faqQuestion
           | WHAT DOES SQUIRE DO?
@@ -53,7 +53,5 @@ block content
           br
           | Twitter:
           a(href='http://twitter.com/junklatch') @junklatch
-          br
-          | Skype:
-          a(href='skype:dwyfi1') DWYFI1
-      a(href='index.html') Back Home
+        .backhome
+          a(href='index.html') Back Home

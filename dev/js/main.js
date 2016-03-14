@@ -11,49 +11,6 @@ console.log('priming');
     };
 })(jQuery);
 
-// var gameBoxes = [
-//   'wtw', // Slide 0
-//   'gonehome', // Slide 1
-//   // 'PointlessCheerfulBurro', // Slide 2
-//   // 'SingleBoldAnemoneshrimp', // Slide 3
-//   // 'WateryOblongCoelacanth', // Slide 4
-//   // 'InconsequentialDifferentKite', // Slide 5
-//   // 'DeficientImpureAnkole', // Slide 6
-//   // 'HopefulBeautifulHen', // Slide 7
-//   // 'TameCavernousIzuthrush', // Slide 8
-//   // 'VapidSerpentineHippopotamus', // Slide 9
-//   // 'NegligibleRecentAfghanhound', // Slide  10
-//   // 'FragrantHeartyKawala', // Slide  11
-// ];
-// 
-
-// var openedGameBoxWidth = "35.75%";
-// var openedProjectDetailsWidth = "64.25%"
-
-
-
-// var concealearOpened = false;
-
-// var tlconcealer = new TimelineMax({paused:true}) 
-//     .to($("#concealer"), 1, { height: "100%" }, "half")
-//     // .to(window, 2, {scrollTo:{y:700}, ease:Power2.easeOut}, "half")
-//     .to($("#concealer"), 1, { height: 0 }, "zero")
-//     .to($("#concealer"), 1, { height: "100%" }, "halfAgain");
-
-// $( ".logotriangle" ).click(function() {
-//   if ( concealearOpened == true ) {
-//     // tl2.tweenFromTo("full", "halfAgain");
-//     tlconcealer.tweenFromTo("zero", "halfAgain");
-//     concealearOpened = false;
-//   }
-//   else {
-//     // tlconcealer2.tweenFromTo("half", "full");
-//     tlconcealer.tweenFromTo("half", "zero");
-//     concealearOpened = true;
-//   };
-//   console.log('set #concealer to ' + concealearOpened);
-// });
-
 var tlTriangleSpin = new TimelineMax({paused:true, delay: 0.5})
   // .to($('.logotriangle'), 0.01, {y: "1em"})
   .to($('.logotriangle'), 0.75, {rotationX: "+=180", force3D:true}, 0.5);
@@ -147,7 +104,7 @@ gameBoxSlider = function(clickElement, openVariable){
   // var tl4 = new TimelineMax({paused:true}) 
   //   .to($(clickElement + ".gameBox"), 0.2, { x: "10px"});
 
-  $(clickElement + ".gameBox").mouseenter(function() {
+  $(clickElement + ".gameBox").on("pointerenter", function() {
     if ( openVariable == true ) {
       tl3.play().timeScale(1);
     } else {
@@ -155,7 +112,7 @@ gameBoxSlider = function(clickElement, openVariable){
     }
   });
 
-  $(clickElement + ".gameBox").mouseleave(function() {
+  $(clickElement + ".gameBox").on("pointerleave", function() {
     if ( openVariable == true ) {
       tl3.reverse().timeScale(4);
       // tl4.play();
@@ -272,7 +229,7 @@ var shieldmove = new TimelineMax({delay: initialLogoDelay})
 logoOpener(1.25);
 // logoCloser();
 
-$( ".squirelogoleft" ).tclick(function() {
+$( ".squirelogoleft" ).on("pointerdown", function() {
   if ( logoOpened == true ) {
     logoCloser(0);
     logoOpened = false;

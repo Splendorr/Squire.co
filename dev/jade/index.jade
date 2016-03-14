@@ -15,7 +15,7 @@ block content
             //- .logocontainer
             //- a(href="#")
             //- img(src="img/squirelogocropped.svg", alt="Squire Logo")
-            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="1920" height="594.053" viewBox="6.9 -516.153 1920 594.053"><g id="logotext" fill="#FFF"><path d="M783.926-333.99v228.113h228.113V-333.99H783.925zm182.978 182.978l-68.518-91.09h-68.514l68.514 91.09h-68.514v-137.03h137.03v137.03zM1423.924-333.99v228.916h45.947v-182.968h137.03v45.94h-137.03l113.658 137.028h68.514l-75.772-91.892h75.772V-333.99zM1926.9-288.043v-45.947h-228.92v228.916h228.92v-45.938h-182.974v-45.954H1926.9v-45.136h-182.974v-45.94zM1332.843-333.99h45.938v228.13h-45.937zM1240.96-151.012h-137.03V-333.99h-45.953v228.916h228.92V-333.99h-45.938zM509.87-333.99v137.024h182.974v45.954H509.87v45.938h228.92v-137.028H555.818v-45.94H738.79v-45.948H555.818z"/></g><g id="logoshield"><path fill="#3333D3" d="M-1381.73-516.153H372.844V77.9H-1381.73z" id="logotextmask"/><path fill="#FFF" d="M235.816-333.99v228.916l-45.942 45.947-45.14-45.947V-333.99H6.9v228.916L189.874 77.9l182.97-182.974V-333.99zM213.25-379.125h68.512v-45.946H213.25v-91.083H167.3v91.082H98.788v45.945h68.514z"/></g></svg>
+            <svg touch-action="none" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="1920" height="594.053" viewBox="6.9 -516.153 1920 594.053"><g id="logotext" fill="#FFF"><path d="M783.926-333.99v228.113h228.113V-333.99H783.925zm182.978 182.978l-68.518-91.09h-68.514l68.514 91.09h-68.514v-137.03h137.03v137.03zM1423.924-333.99v228.916h45.947v-182.968h137.03v45.94h-137.03l113.658 137.028h68.514l-75.772-91.892h75.772V-333.99zM1926.9-288.043v-45.947h-228.92v228.916h228.92v-45.938h-182.974v-45.954H1926.9v-45.136h-182.974v-45.94zM1332.843-333.99h45.938v228.13h-45.937zM1240.96-151.012h-137.03V-333.99h-45.953v228.916h228.92V-333.99h-45.938zM509.87-333.99v137.024h182.974v45.954H509.87v45.938h228.92v-137.028H555.818v-45.94H738.79v-45.948H555.818z"/></g><g id="logoshield"><path fill="#3333D3" d="M-1381.73-516.153H372.844V77.9H-1381.73z" id="logotextmask"/><path fill="#FFF" d="M235.816-333.99v228.916l-45.942 45.947-45.14-45.947V-333.99H6.9v228.916L189.874 77.9l182.97-182.974V-333.99zM213.25-379.125h68.512v-45.946H213.25v-91.083H167.3v91.082H98.788v45.945h68.514z"/></g></svg>
             //- #animate
             //-   a(href="#opencontainer")
             //-     h3 TEST
@@ -86,7 +86,7 @@ block content
             //- a(href="#")
             #shifter
               //- .wherethewaterGamebox.wherethewater
-              .wherethewater.gameBox.tallBox
+              .wherethewater.gameBox(touch-action='pan-y').tallBox
                 img.oneHundred(src="img/wherethewater-logo.png", alt="Where the Water Tastes Like Wine Logo")
               //- .projectDetails.concealed
               //- .wherethewaterProjectDetails
@@ -113,7 +113,7 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .gonehome.gameBox.tallBox
+              .gonehome.gameBox(touch-action='pan-y').tallBox
                 img(src="img/gonehome-logo.png", alt="Gone Home Logo")
               .gonehome.projectDetails
                 div
@@ -143,7 +143,7 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .rk3000.gameBox.tallBox
+              .rk3000.gameBox(touch-action='pan-y').tallBox
                 img(src="img/rk3000-logo.png", alt="RK3000 Logo")
               .rk3000.projectDetails
                 div
@@ -164,7 +164,7 @@ block content
         .onehalf
           .whiteBorder
             #shifter
-              .homeimprov.gameBox.tallBox
+              .homeimprov.gameBox(touch-action='pan-y').tallBox
                 img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
               .homeimprov.projectDetails
                 div
@@ -182,6 +182,7 @@ block content
                     | twitter: #[a(href="http://twitter.com/storkburntdown") @storkburntdown]
                     br
                     | tumblr: #[a(href="http://thestorkburntdown.tumblr.com/") thestorkburntdown]
+              a.invisiblelink(id="opencontainer")
           //- .role
           //-   //- p Marketing/PR
           //-   p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
@@ -199,14 +200,14 @@ block content
       //-   .pastProjectsLineTwo
       //-     hr#games.splitterWithText
 
-      a.invisiblelink(id="opencontainer")
+      //- a.invisiblelink(id="opencontainer")
       .gamelist.part3          
         .expander.closed
           .content
             .onethird
               .whiteBorder
                 #shifter
-                  .delversdrop.gameBox
+                  .delversdrop.gameBox(touch-action='pan-y')
                     img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
                   .delversdrop.projectDetails
                     div
@@ -233,7 +234,7 @@ block content
             .onethird
               .whiteBorder
                 #shifter
-                  .brigador.gameBox
+                  .brigador.gameBox(touch-action='pan-y')
                     //- img(src="img/brigador-title.png", alt="Brigador")
                   .brigador.projectDetails
                     div
@@ -260,7 +261,7 @@ block content
                 #shifter
                   //-   a(href="http://pioneersgame.com/")
                   .pioneersGradient
-                    .pioneers.gameBox
+                    .pioneers.gameBox(touch-action='pan-y')
                       //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
                   .pioneers.projectDetails
                     div
@@ -288,7 +289,7 @@ block content
               .whiteBorder
                 #shifter
                   //- a(href="http://www.balloonandfriends.com/borumo")
-                  .borumo.gameBox
+                  .borumo.gameBox(touch-action='pan-y')
                     //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
                   .borumo.projectDetails
                     div
@@ -318,7 +319,7 @@ block content
               .whiteBorder
                 #shifter
                   //- a(href="http://ratcasket.com/")
-                  .kerfuffle.gameBox
+                  .kerfuffle.gameBox(touch-action='pan-y')
                     img.oneHundred(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
                   .kerfuffle.projectDetails
                     div
@@ -341,7 +342,7 @@ block content
               .whiteBorder
                 #shifter
                   //- a(href="http://mushroom11.com/")
-                  .mushroom11.gameBox
+                  .mushroom11.gameBox(touch-action='pan-y')
                     img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
                   .mushroom11.projectDetails
                     div
@@ -388,7 +389,7 @@ block content
 
       // change behaviour of controller to animate scroll instead of jump
       controller.scrollTo(function (newpos) {
-        TweenMax.to(window, 2.15, {scrollTo: {y: newpos}, force3D:true});
+        TweenMax.to(window, 2.5, {scrollTo: {y: newpos}, force3D:true});
       });
 
       //  bind scroll to anchor links
