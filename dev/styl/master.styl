@@ -57,7 +57,7 @@ body
   font-family 'nb_international_mono-webfont', monospace;
   font-kerning: normal;
   
-  padding-bottom 4em
+  padding-bottom 2rem
   
 a
   &:link 
@@ -81,12 +81,18 @@ a
  
 
 // SVG fix for IE 
-img 
+img
   width: 100%
 
 img, svg
   max-width 100%
   // display: block
+    
+svg
+  width 100%
+  height auto
+  max-height 100%
+  
     
 #contentwidth
   // center(100%, 15%)
@@ -101,6 +107,8 @@ p
   font-family 'nb_international_mono-webfont', monospace;
   font-kerning: normal;
   // text-align center 
+  margin 0
+  padding 0
     
   line-height 1.3em
   a
@@ -128,7 +136,9 @@ p
   
     
 #squirelogo
-  center(30em, 5%)
+  // center(30em, 5%)
+  // col(1/3)
+  width: 75%
   margin-top 4rem
   margin-bottom 1rem 
   
@@ -141,19 +151,39 @@ p
     margin-bottom 1rem
     
 .toprow
-  margin-top 4rem
+  margin-top 2.25rem
+  margin-bottom 2.25rem
   // center(100%, 10%)
   center(100%)
-  
+
+.logocontainer
+  // position relative
+  display flex
+  align-items: center;
+  width 100%
+  // height auto 
+  img
+    // width 100%
+    // height auto 
   
 .squirelogoleft
   // col(1/3, offset: 1/6)
   // col(3/6, gutter: 1.3)
   // col(3/6, offset: 1/12, gutter: 1.3)
-  col(6/16, offset: 1/16, gutter: 1.3)
+  // box-sizing:border-box
+  col(8/16, gutter: 1.3)
+  // align(both)
   // unstack()
   text-align right
   // margin-top 2em
+  +below(1100px)
+    col(12/16, offset: 2/16, gutter: 1.3)
+  +below(800px)  
+    col(14/16, offset: 1/16, gutter: 1.3)    
+  +below(600px)
+    col(1)
+    // col(9/10)
+    // center(90%)
 
 .topcopy
   // center(40em)
@@ -163,45 +193,131 @@ p
   margin-top 0
   padding-top 0
   // unstack()
-  text-align justify
-  // text-align left
+  p
+    text-align justify
+    // text-align left
+
   // margin-top 2.6rem
+  margin-top 4.3%
+  
+  +below(1440px)
+    margin-top 4.3%
+  
+  +below(1100px)
+    col(12/16, offset: 2/16, gutter: 1.3)
+  +below(800px)  
+    col(14/16, offset: 1/16, gutter: 1.3)
 
   +below(600px)
-    text-align left
+    col(1)
+    p
+      text-align left
+    margin-top 1.25em 
     
 p.tagline
   // font-size 1.3em
-  font-size 1.8em
+  font-size 1.5em
   line-height 1.2em
   // padding-bottom 2em
   // padding-bottom 1em
-  text-align justify
+  // text-align justify
   padding-top 0
   margin-top 0
-  
-  +below(600px)
-    text-align left
+  margin-bottom 0
+  // padding-bottom 0
     
+  +below(1440px)
+    // text-align left
+    font-size 1.3em 
+    line-height 1.2em
+  +between(1200px, 1300px)
+    font-size 1.2em
+  +between(1100px, 1200px)
+    font-size 1.1em
+  +between(800px, 1100px)
+    font-size 1.75em
+  +below(800px)
+    // text-align left
+    font-size 1.3em 
+    line-height 1.3em
+    // padding-bottom 1em  
+
 p.secondline
   font-size 1.2em
+  
+  +below(1440px)
+    font-size 1em 
+
+  +between(1200px, 1300px)
+    font-size 0.9em
+
+  +between(1100px, 1200px)
+    font-size 0.8em
+  
+  +below(600px)
+    font-size 1em 
+   
+  // col(3/4)
+  // shift(1/4)
+
+p.secondline, .contactlinks, .newsletter   
+  // margin-top 1.6rem
+  margin-top 4.4%
+  margin-bottom 0
+  padding-bottom 0
+  +below(1440px)
+    margin-top 1em
+  +between(1200px, 1350px)
+    margin-top 0.75em
+  +between(1100px, 1200px)
+    margin-top 0.75em 
+  +below(1100px)
+    margin-top 2em 
+
    
     
 .contactlinks
+  // col(1/4)
+  span(2/5)
+  +below(600px)
+    col(1)
+  // shift(-3/4)
+    
+  // display flex
+  // justify-content: space-between;
+    
   // center(100%)
   // text-align center
   text-align left
   // padding-top 2em
   // padding-bottom 2em
   line-height 1.3em
-  margin-top 1.6rem
-  margin-bottom 1em 
+  // margin-top 1.6rem
+  // margin-bottom 1em 
   padding-top 0 
   
+  a
+    // text-align left
+    margin auto
+    // padding 0
     
   img
-    height 1.5em
-    width auto 
+    height 1.75em
+    width auto
+    
+    +between(1100px, 1300px)
+      height 1.5em 
+      
+    // width: 1em
+    // height auto 
+
+    // text-align left
+    // margin 0
+    // padding 0
+    // margin auto
+    // display inline-block
+    // margin 0
+    // padding 0
   
   ul
     display inline-block
@@ -227,7 +343,7 @@ p.secondline
   
 .squireTwitter
   // width 6%
-  margin-left 1.2em
+  margin-left 1.5rem
   // +below(600px)
   //   width 11%
   
@@ -236,6 +352,142 @@ p.secondline
 //   margin-left 1.2em
 //   +below(600px)
 //     width 9%
+
+
+.newsletter
+  // line-height 1.3em
+  // padding-top 1em
+  // padding-bottom 1em
+  // transition: all .5s ease
+  span(3/5)
+  
+  +below(600px)
+    col(1)
+  // span(1/2, offset: 1/4)
+  // +below(700px)
+  //   stack()
+  //   col(6/8, offset: 1/8)
+  // +below(500px)
+  //   col(1)
+  
+  p
+    // padding-left 0.5em !important
+    padding-bottom 0 !important
+    margin-bottom 0 !important
+    // color black
+      
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(255,255,255,1);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255,255,255,1);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255,255,255,1);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: rgba(255,255,255,1);
+  }
+  
+  :focus::-webkit-input-placeholder {
+    color:    rgba(133,133,255,1);
+  }
+  ::-moz-placeholder:focus {
+    color:    rgba(133,133,255,1);
+  }
+  :-moz-placeholder:focus {
+    color:    rgba(133,133,255,1);
+  }
+  :-ms-input-placeholder:focus {
+    color:    rgba(133,133,255,1);
+  }
+
+input#mce-EMAIL, input#mc-embedded-subscribe
+  font-size 1em
+  line-height 1.5em
+  padding 0
+  padding-top .2em 
+  // upcase()
+    
+  +between(1100px, 1300px)
+    padding-top 0.1em 
+    font-size 0.9em 
+    line-height 1.3em 
+
+  // +below(1100px)
+  //   padding-top 0.2em 
+  //   font-size 1em 
+  //   line-height 1.5em 
+  
+  +below(700px)
+    // font-size 1em
+    // line-height 2em
+            
+.signupto
+  float left
+  
+    
+#mc_embed_signup
+  // width 100%
+  // field(right, 100%)
+  padding 0
+  margin 0 
+  width 100%
+  +below(300px)
+    // margin-top 1em 
+ 
+form#mc-embedded-subscribe-form
+  width 100% 
+  padding 0
+  margin 0
+  field(left, 100%)
+  background-color #3333d3
+  
+#mc_embed_signup_scroll
+  // display block
+  border 2px solid white !important
+  // border-right none !important 
+  background-color #3333d3
+  // color #3333d3
+  overflow hidden
+  
+span.formcontainer
+  display block
+  overflow hidden
+
+input#mce-EMAIL
+  // input()
+  width 100%
+  margin 0 !important
+  border none
+  padding-left 0.5em !important
+  background-color #3333d3
+  color: #FFF
+  // padding-right -1em !important
+
+input#mc-embedded-subscribe.button
+  transition: all .1s ease
+  // button: gray 'medium'
+  // background-color #C0C0C0 
+  background-color #FFF 
+  color #3333d3
+  float right
+  border none
+  margin 0 !important
+  padding-right 1em
+  padding-left 1em 
+  // border-left 1px solid silver
+  // blue border for newsletter button
+  // border 1px solid #3333d3 !important
+  border 1px solid #FFF !important
+  -webkit-border-radius 0px 
+  border-radius 0px 
+  
+  &:hover
+      border 1px solid #3333d3 !important
+
+    
+
     
 .letterframe
   center(60em)
@@ -287,25 +539,34 @@ p.openletter
   font-size 1.4em
   
 p.faqtitle
-  font-size 3em 
-  
+  margin-top 0.5em
+  margin-bottom 0.5em  
+  font-size 3em
 p.faqQuestion
-  font-size 1.4em 
-  margin-bottom 0
+  font-size 1.8em 
+  +below(800px)
+    font-size 1.3em 
+  // margin-bottom 0
+  margin-bottom 0.5em  
   padding-bottom 0
   
 .faqAnswer
-  margin-bottom 3em 
+  margin-bottom 3em
   margin-top 0
   padding-top 0
   
-  p
+  font-size 1.2em 
+  line-height 1.4em
+  +below(800px)
     font-size 1em 
+  p
+    margin-bottom 1em
 
 .backhome
-  padding-top 4em 
+  // padding-top 4em 
+  margin-bottom 2em
   // text-align center
-  text-align left
+  // text-align left
   
 .fullcol
   col(1)
@@ -322,6 +583,7 @@ hr.splitter
     
 .currentProjects
   margin-top 1em
+  // text-align center
     
 hr.splitterWithText
   // width 80%
@@ -334,18 +596,36 @@ hr.splitterWithText
 
 .currentProjectsLineOne
   col(3/16, gutter: 1.3, cycle: 3)
-
-.currentProjectsLineTwo
-  col(11/16, gutter: 1.3, cycle: 3)
+  +below(1100px)
+    col(6/16, gutter: 1.3, cycle: 3)
+  +below(800px)
+    col(5/16, gutter: 1.3, cycle: 3)
 
 .currentProjectsTitle
-  col(2/16, gutter: 1.3, cycle: 3)
+  text-align center
   p
     line-height 1em
     font-size 1.1em  
     padding-top 0
     margin-top 0rem 
-    font-weight bold 
+    font-weight bold
+    // text-align center
+  col(2/16, gutter: 1.3, cycle: 3)
+  +below(1100px)
+    col(4/16, gutter: 1.3, cycle: 3)
+    p
+      line-height 1em
+      font-size 0.9em
+  +below(800px)
+    col(6/16, gutter: 1.3, cycle: 3)
+      
+.currentProjectsLineTwo
+  col(11/16, gutter: 1.3, cycle: 3)
+  +below(1100px)
+    col(6/16, gutter: 1.3, cycle: 3)
+  +below(800px)
+    col(5/16, gutter: 1.3, cycle: 3)
+
   
 .pastProjectsLineOne
   col(2/18, gutter: 1.3, cycle: 3)
@@ -367,12 +647,48 @@ hr.splitterWithText
   width 192px
   height auto 
   margin-bottom 2em
+
+.logotriangle
+  // text-align center
+  width 96px
+  height auto 
+  margin-top 1em
+  // margin-bottom 1em
+  // margin-top 1em
+  
+.invisiblelink
+  // display none
+  
+.bottomspacer
+  padding-top 2em
    
 
 .gamelist
   // transition: all .5s ease
   cf()
   // padding-top 1em
+    
+#concealer
+  overflow hidden 
+  // display flex
+  height: 0
+  // display none
+    
+.expander {
+  // width:300px;
+  // border:solid 1px #555;
+  // border-top 5px solid white 
+  // border-bottom 5px solid white
+  // margin-top 0.5em
+  // padding:10px;
+  // margin:10px;
+  // cursor:pointer;
+}
+.content{
+  overflow:hidden;
+  height 0
+  // padding-top 1.5em
+}
     
 .onehalf
   col(1/2, gutter: 1.3, cycle: 2)
@@ -381,9 +697,9 @@ hr.splitterWithText
   
 .onethird
   col(1/3, gutter: 1.3, cycle: 3)
-  +below(900px)
+  +below(1200px)
     col(1/2, gutter: 1.3, uncycle: 3, cycle: 2)
-  +below(600px)
+  +below(900px)
     col(1)
     
 .onethirdOffset
@@ -393,34 +709,156 @@ hr.splitterWithText
   +below(600px)
     col(1)
 
+.whiteBorder
+  border 2px solid
+  background-color #FFF 
+  // height 14em
+  // margin-bottom 3.1em
+  margin-bottom 1.5em
+  +below(1440px)
+    margin-bottom 1em
   
-.gamebox
-  // transition: all .5s ease
-  position relative
+#shifter
+  overflow hidden
+  
+.gameBox, .projectDetails
   height 12em
-  // background-color #FFF 
-  border 1px solid
-  // margin-bottom 1em
-  // margin-right 1em
-  // margin-left 1em
+  .onehalf &
+    height 14em
+
+.gameBox
+  span(1)
+  
+  // // *zoom: 1;
+  // float: left;
+  // // clear: none;
+  // text-align: inherit;
+  // width: 100%;
+  // margin-left: 0%;
+  // margin-right: 0%;
+
+  position relative
+  // height 12em
   z-index 0
-    
   img
     position relative
     align(both)
-    // max-width 75%
     max-height 80%
     width auto
+    
   img.oneHundred
     position relative
     align(both)
-    // max-width 75%
     max-height 100%
     width auto
-    
-.gamebox.wherethewater, .gamebox.gonehome, .gamebox.rk3000, .gamebox.homeimprov
-  height 14em
 
+.projectDetails
+  // span(0)
+  
+  // *zoom: 1;
+  // // float: left;
+  // // clear: none;
+  // text-align: inherit;
+  width: 0%;
+  // margin-left: 0%;
+  // margin-right: 0%;
+  
+  // width: 0%
+  // opacity 0
+  
+  display flex
+  flex-direction: column
+  justify-content: space-between
+
+  position relative
+  background-color #FFF
+  color #3333d3
+  // background-color #000
+  // color #FFF 
+  text-align left
+  // height 12em
+  
+  $gameListingText = 1.1em
+
+  p, h3
+    padding-left 1em 
+    text-align left
+    font-size $gameListingText
+    line-height 1.3em  
+    // padding-top 0.5em
+    padding-bottom 0.5em
+    // opacity 0
+      
+    .onethird &
+      font-size ($gameListingText - .1em)
+    
+    &.devContacts
+      font-size (@font-size * .9)
+      
+    +below(1400px)
+      line-height 1.3em 
+      font-size 1em
+      
+      &.devContacts
+        font-size (@font-size * .8)
+
+      .onethird &
+        font-size 0.9em
+
+    +below(600px)
+      line-height 1.5em 
+      font-size 0.8em
+      padding-top 0.25em
+      
+      &.devContacts
+        font-size (@font-size * 1)
+
+      .onethird &
+        line-height 1.5em
+        font-size 0.8em
+
+  h3
+    // padding 0
+    // font-size 1.2em
+    upcase()
+    margin 0
+    padding-top 0.5em
+    padding-bottom 0
+    // padding-bottom 0.25em
+    // padding 0
+    // padding-top 0.25em 
+    font-size 1.1em
+    +below(1300px)
+      font-size 1em
+    +below(600px)
+      font-size 0.9em
+      
+    
+  a
+    &:link 
+      // color: link
+      color: #3333d3
+      // text-decoration none
+      font-weight normal 
+      background-image: none
+      // border-bottom: 1px solid link;
+      
+    &:hover 
+      // color: linkhover
+      color: #3333d3
+      background-image: none
+      // border-bottom: 1px solid linkhover;
+    &:visited 
+      // color: linkvisited
+      color: #3333d3
+    &:active 
+      // color: linkactive
+      color: #3333d3
+      
+    
+// .tallBox
+//   height 14em
+  
 .gamename
   // position relative
   align(both)
@@ -457,33 +895,39 @@ hr.splitterWithText
   //     color: linkvisited
   //   &:active 
   //     color: linkactive
-  
-.brigador
-  background url("../img/brigador-bg.png") center center no-repeat
-  background-color #0A0100 
-  -webkit-background-size contain 
-  -o-background-size contain
-  background-size contain 
 
-.gonehome
+.wherethewater.gameBox
+  background url("../img/wherethewater-bg.jpg") center center
+  -webkit-background-size cover 
+  -o-background-size cover 
+  background-size cover 
+  
+.brigador.gameBox
+  background url("../img/brigador-bg.png") top center no-repeat
+  background-color #0A0100 
+  -webkit-background-size cover 
+  -o-background-size cover
+  background-size cover 
+
+.gonehome.gameBox
   background url("../img/gonehome-bg.jpg") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
 
-.rk3000
+.rk3000.gameBox
   background url("../img/rk3000-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
   
-.delversdrop
+.delversdrop.gameBox
   background url("../img/delversdrop-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
     
-.kerfuffle
+.kerfuffle.gameBox
   background url("../img/kerfuffle-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 
@@ -498,32 +942,26 @@ hr.splitterWithText
   //   60% #4A6586,
   //   100% #4A6586
   // )
-.pioneers
+.pioneers.gameBox
   background-color #EADFC1 
   background url("../img/pioneers-bg.png") center center no-repeat
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
-        
-.wherethewater
-  background url("../img/wherethewater-bg.jpg") center center
-  -webkit-background-size cover 
-  -o-background-size cover 
-  background-size cover 
           
-.mushroom11
+.mushroom11.gameBox
   background url("../img/mushroom11-bg.jpg") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
             
-.borumo
+.borumo.gameBox
   background url("../img/borumo-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 
   background-size cover 
               
-.homeimprov
+.homeimprov.gameBox
   background url("../img/homeimprov-bg.png") center center
   -webkit-background-size cover 
   -o-background-size cover 

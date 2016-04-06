@@ -65,7 +65,8 @@ gulp.task('stylus', function(){
     '!' + dev_path.styl + '_*'
     ])
     .pipe(plugins.stylus({
-      use: [axis(), jeet(), rupture(), autoprefixer()],
+      // use: [axis(), jeet(), rupture(), autoprefixer()],
+      use: [axis(), jeet(), rupture()],
       //compress: true,
       //
       // TK this isn't right, isn't building properly

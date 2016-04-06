@@ -7,12 +7,18 @@ block content
   //-   a(href="#")
   //-     img(src="img/squirelogo.svg", alt="Squire Logo")
   #contentwidth
+    //- a(id="top")
     .fullcol
       .clearfix
         .toprow
           .squirelogoleft
-            a(href="#")
-              img(src="img/squirelogocropped.svg", alt="Squire Logo")
+            //- .logocontainer
+            //- a(href="#")
+            //- img(src="img/squirelogocropped.svg", alt="Squire Logo")
+            <svg touch-action="none" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="1920" height="594.053" viewBox="6.9 -516.153 1920 594.053"><g id="logotext" fill="#FFF"><path d="M783.926-333.99v228.113h228.113V-333.99H783.925zm182.978 182.978l-68.518-91.09h-68.514l68.514 91.09h-68.514v-137.03h137.03v137.03zM1423.924-333.99v228.916h45.947v-182.968h137.03v45.94h-137.03l113.658 137.028h68.514l-75.772-91.892h75.772V-333.99zM1926.9-288.043v-45.947h-228.92v228.916h228.92v-45.938h-182.974v-45.954H1926.9v-45.136h-182.974v-45.94zM1332.843-333.99h45.938v228.13h-45.937zM1240.96-151.012h-137.03V-333.99h-45.953v228.916h228.92V-333.99h-45.938zM509.87-333.99v137.024h182.974v45.954H509.87v45.938h228.92v-137.028H555.818v-45.94H738.79v-45.948H555.818z"/></g><g id="logoshield"><path fill="#3333D3" d="M-1381.73-516.153H372.844V77.9H-1381.73z" id="logotextmask"/><path fill="#FFF" d="M235.816-333.99v228.916l-45.942 45.947-45.14-45.947V-333.99H6.9v228.916L189.874 77.9l182.97-182.974V-333.99zM213.25-379.125h68.512v-45.946H213.25v-91.083H167.3v91.082H98.788v45.945h68.514z"/></g></svg>
+            //- #animate
+            //-   a(href="#opencontainer")
+            //-     h3 TEST
           .topcopy
             p.tagline Squire is a video game company that produces & promotes great games.
 
@@ -27,6 +33,24 @@ block content
                 img.squireTwitter(src="img/twitter.png", alt="Twitter")
               a(href="faq.html")
                 img.squireTwitter(src="img/faq.png", alt="FAQ")
+
+            .newsletter
+              //- p.upcase.signupto Mailing list:
+              //- .field
+              // Begin MailChimp Signup Form
+              #mc_embed_signup
+                form#mc-embedded-subscribe-form.validate(action='//squire.us12.list-manage.com/subscribe/post?u=b74f3600c2a789bf9c0645f51&id=8a3956cdd8', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                  #mc_embed_signup_scroll
+                    input#mc-embedded-subscribe.button(type='submit', value='Sign Up', name='subscribe')
+                    span.formcontainer
+                      input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Newsletter', required='')
+                      // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                      div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_b74f3600c2a789bf9c0645f51_8a3956cdd8', tabindex='-1', value='')
+                      //- .clear
+              // End mc_embed_signup
+              
+
               //- ul
                 //- li.listpadright email: 
                   //- a(href="mailto:chris@squire.co") chris@squire.com
@@ -44,7 +68,7 @@ block content
           .currentProjectsLineOne
             hr#games.splitterWithText
           .currentProjectsTitle
-            p CURRENT PROJECTS
+            p PROJECTS
           .currentProjectsLineTwo
             hr#games.splitterWithText
 
@@ -57,111 +81,330 @@ block content
 
       .gamelist
         .onehalf
-          a(href="http://wherethewatertasteslikewine.com/")
-            .gamebox.wherethewater
-              img.oneHundred(src="img/wherethewater-logo.png", alt="Where the Water Tastes Like Wine Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/dimbulbgames") @dimbulbgames] &bull; #[a(href="http://twitter.com/johnnemann") @johnnemann]
-            //- .gamename
-              p Where the Water Tastes Like Wine
+          .whiteBorder
+            //- a(href="http://wherethewatertasteslikewine.com/")
+            //- a(href="#")
+            #shifter
+              //- .wherethewaterGamebox.wherethewater
+              .wherethewater.gameBox(touch-action='pan-y').tallBox
+                img.oneHundred(src="img/wherethewater-logo.png", alt="Where the Water Tastes Like Wine Logo")
+              //- .projectDetails.concealed
+              //- .wherethewaterProjectDetails
+              .wherethewater.projectDetails
+                //- .wherethewaterText
+                div
+                  h3 Where the Water Tastes Like Wine
+                  p 
+                    //- | GAME: Where the Water Tastes Like Wine
+                    //- br
+                    | DEVELOPER: Dim Bulb
+                    //- br
+                    //- | PLATFORMS: TBA
+                  p 
+                    | + Production
+                    br
+                    | + Promotion
+                div
+                  p.devContacts
+                    | twitter: #[a(href="http://twitter.com/dimbulbgames") @dimbulbgames]
+                    br
+                    | web: #[a(href="http://www.wtwtlw.com/") wtwtlw.com]
+
         .onehalf
-          a(href="http://www.gonehomegame.com/")
-            .gamebox.gonehome
-              img(src="img/gonehome-logo.png", alt="Gone Home Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/fullbright") @fullbright]
-            //- .gamename
-              p Where the Water Tastes Like Wine
+          .whiteBorder
+            #shifter
+              .gonehome.gameBox(touch-action='pan-y').tallBox
+                img(src="img/gonehome-logo.png", alt="Gone Home Logo")
+              .gonehome.projectDetails
+                div
+                  h3 GONE HOME
+                  p 
+                    | DEVELOPER: Fullbright
+                    br
+                    | PLATFORMS: PS4 / Xbox One
+                  p 
+                    //- | SQUIRE'S ROLE:
+                    //- br
+                    | + Production on Console Ports
+                    br
+                    | + Promotion
+                div
+                  p.devContacts
+                    | twitter: #[a(href="http://twitter.com/fullbright") @fullbright]
+                    br
+                    | web: #[a(href="http://www.gonehomegame.com/") gonehomegame.com]
+
+            //- .role
+            //-   //- p Marketing/PR
+            //-   p #[a(href="http://twitter.com/fullbright") @fullbright]
+            //-   //- .gamename
+            //-     p Where the Water Tastes Like Wine
       .gamelist.part2              
         .onehalf
-          a(href="http://www.rk3000.com/")
-            .gamebox.rk3000
-              img(src="img/rk3000-logo.png", alt="RK3000 Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
-            //- .gamename
-              //- p RK3000
+          .whiteBorder
+            #shifter
+              .rk3000.gameBox(touch-action='pan-y').tallBox
+                img(src="img/rk3000-logo.png", alt="RK3000 Logo")
+              .rk3000.projectDetails
+                div
+                  h3 RK3000
+                  p 
+                    | DEVELOPER: René Rother
+                    //- br
+                    //- | PLATFORMS: TK
+                  p 
+                    | + Production
+                    br
+                    | + Promotion
+                div
+                  p.devContacts
+                    | twitter: #[a(href="http://twitter.com/primaerfunktion") @primaerfunktion]
+                    br
+                    | web: #[a(href="http://www.primaerfunktion.de/") primaerfunktion.de]
         .onehalf
-          a(href="http://homeimprovisation.com/")
-            .gamebox.homeimprov
-              img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
-            //- .gamename
-              p Home Improvisation
-      img.triangle(src="img/triangle192.png", alt="A triangle")
-
-      .currentProjects.clearfix
-        .pastProjectsLineOne
-          hr#games.splitterWithText
-        .pastProjectsTitle
-          p PAST PROJECTS
-        .pastProjectsLineTwo
-          hr#games.splitterWithText
-
-      .gamelist.part3              
-        .onethird
-          a(href="http://delversdrop.com/")
-            .gamebox.delversdrop
-              img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
-            //- .gamename
-              //- p Delver's Drop
-        .onethird
-          a(href="http://stellarjockeys.com/")
-            .gamebox.brigador
-              //- img(src="img/brigador-title.png", alt="Brigador")
-              //- .gamename
-                //- p Brigador
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/HughSJ") @hughsj] &bull; #[a(href="http://twitter.com/gausswerks") @gausswerks]
-        .onethird
-          .pioneersGradient
-            a(href="http://pioneersgame.com/")
-              .gamebox.pioneers
-                //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/pioneersgame") @pioneersgame] &bull; #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
-            //- .gamename
-              p Pioneers
-        .onethird
-          a(href="http://www.balloonandfriends.com/borumo")
-            .gamebox.borumo
-              //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
-            //- .gamename
-              p Boru Mo
-        
+          .whiteBorder
+            #shifter
+              .homeimprov.gameBox(touch-action='pan-y').tallBox
+                img(src="img/homeimprov-logo.png", alt="Home Improvisation Logo")
+              .homeimprov.projectDetails
+                div
+                  h3 Home Improv
+                  p 
+                    | DEVELOPER: The Stork Burnt Down
+                    //- br
+                    //- | PLATFORMS: TK
+                  p 
+                    | + Production
+                    br
+                    | + Promotion
+                div
+                  p.devContacts  
+                    | twitter: #[a(href="http://twitter.com/storkburntdown") @storkburntdown]
+                    br
+                    | tumblr: #[a(href="http://thestorkburntdown.tumblr.com/") thestorkburntdown]
+              a.invisiblelink(id="opencontainer")
+          //- .role
+          //-   //- p Marketing/PR
+          //-   p #[a(href="http://twitter.com/storkburntdown") @storkburntdown] &bull; #[a(href="http://twitter.com/homeimprovgame") @homeimprovgame]
+          //-   //- .gamename
+          //-     p Home Improvisation
+      //- img.triangle(src="img/triangle192.png", alt="A triangle")
       
-        .onethird
-          a(href="http://ratcasket.com/")
-            .gamebox.kerfuffle
-              img(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/ratcasket") @ratcasket]
+      
 
-            //- .gamename
-              p Kerfuffle
-        .onethird
-          a(href="http://mushroom11.com/")
-            .gamebox.mushroom11
-              img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
-          .role
-            //- p Marketing/PR
-            p #[a(href="http://twitter.com/untamegames") @untamegames]
-            //- .gamename
-              p Mushroom 11
+      //- .currentProjects.clearfix
+      //-   .pastProjectsLineOne
+      //-     hr#games.splitterWithText
+      //-   .pastProjectsTitle
+      //-     p PAST PROJECTS
+      //-   .pastProjectsLineTwo
+      //-     hr#games.splitterWithText
 
+      //- a.invisiblelink(id="opencontainer")
+      .gamelist.part3          
+        .expander.closed
+          .content
+            .onethird
+              .whiteBorder
+                #shifter
+                  .delversdrop.gameBox(touch-action='pan-y')
+                    img(src="img/delversdrop-logo.png", alt="Delver's Drop Logo")
+                  .delversdrop.projectDetails
+                    div
+                      h3 Delver's Drop
+                      p 
+                        | DEVELOPER: Pixelscopic
+                        //- br
+                        //- | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p.devContacts 
+                        | twitter: #[a(href="http://twitter.com/delversdrop") @delversdrop]
+                        br
+                        | web: #[a(href="http://delversdrop.com/") delversdrop.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/delversdrop") @delversdrop] &bull; #[a(href="http://twitter.com/pixelscopic") @pixelscopic]
+              //-   //- .gamename
+              //-     //- p Delver's Drop
+            .onethird
+              .whiteBorder
+                #shifter
+                  .brigador.gameBox(touch-action='pan-y')
+                    //- img(src="img/brigador-title.png", alt="Brigador")
+                  .brigador.projectDetails
+                    div
+                      h3 BRIGADOR
+                      p 
+                        | DEVELOPER: Gausswerks
+                        //- br
+                        //- | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/hughsj") @hughsj] #[a(href="http://twitter.com/gausswerks") @gausswerks]
+                        br
+                        | web: #[a(href="http://stellarjockeys.com/") stellarjockeys.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/HughSJ") @hughsj] &bull; #[a(href="http://twitter.com/gausswerks") @gausswerks]
+            .onethird
+              .whiteBorder
+                #shifter
+                  //-   a(href="http://pioneersgame.com/")
+                  .pioneersGradient
+                    .pioneers.gameBox(touch-action='pan-y')
+                      //- img(src="img/pioneers-logo.png", alt="Pioneers Logo")
+                  .pioneers.projectDetails
+                    div
+                      h3 PIONEERS
+                      p 
+                        | DEVELOPER: Eigenlink
+                        //- br
+                        //- | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/pioneersgame") @pioneersgame] #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
+                        br
+                        | web: #[a(href="http://pioneersgame.com/") pioneersgame.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/pioneersgame") @pioneersgame] &bull; #[a(href="http://twitter.com/eigenlenk") @eigenlenk]
+              //-   //- .gamename
+              //-     p Pioneers
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://www.balloonandfriends.com/borumo")
+                  .borumo.gameBox(touch-action='pan-y')
+                    //- img(src="img/borumo-logo.png", alt="Boru Mo Logo")
+                  .borumo.projectDetails
+                    div
+                      h3 Boru Mo
+                      p 
+                        | DEVELOPER: Balloon + Friends
+                        //- br
+                        //- | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
+                        br
+                        | web: #[a(href="http://balloonandfriends.com/borumo") balloonandfriends.com/borumo]
+                  //- .role
+                  //-   //- p Marketing/PR
+                  //-   p #[a(href="http://twitter.com/spacetreasured") @spacetreasured]
+                  //-   //- .gamename
+                  //-     p Boru Mo
+            
+          
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://ratcasket.com/")
+                  .kerfuffle.gameBox(touch-action='pan-y')
+                    img.oneHundred(src="img/kerfuffle-logo.png", alt="Kerfuffle Logo")
+                  .kerfuffle.projectDetails
+                    div
+                      h3 Kerfuffle
+                      p 
+                        | DEVELOPER:  R̛A͢T̷́ ̡C̵A̴SK̶̴E̷̵̛T 
+                        br
+                        | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/ratcasket") @ratcasket]
+                        br
+                        | web: #[a(href="http://kerfuffle.io") kerfuffle.io]
+            .onethird
+              .whiteBorder
+                #shifter
+                  //- a(href="http://mushroom11.com/")
+                  .mushroom11.gameBox(touch-action='pan-y')
+                    img(src="img/mushroom11-logo.png", alt="Mushroom 11 Logo")
+                  .mushroom11.projectDetails
+                    div
+                      h3 Mushroom 11
+                      p 
+                        | DEVELOPER: Untame
+                        //- br
+                        //- | PLATFORMS: TK
+                      p 
+                        | + Production
+                        br
+                        | + Promotion
+
+                    div
+                      p 
+                        | twitter: #[a(href="http://twitter.com/untamegames") @untamegames]
+                        br
+                        | web: #[a(href="http://mushroom11.com") mushroom11.com]
+              //- .role
+              //-   //- p Marketing/PR
+              //-   p #[a(href="http://twitter.com/untamegames") @untamegames]
+              //-   //- .gamename
+              //-     p Mushroom 11
         
+
+
+        a(href="#opencontainer")
+          img.logotriangle(src="img/squirelogoTriangle.svg", alt="Squire Logo")
+        //- a(id="opencontainer")
+        .bottomspacer
+
+  script
+    // init controller
+      var controller = new ScrollMagic.Controller();
+
+      // build tween
+      //- var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+
+      // build scene
+      //- var scene = new ScrollMagic.Scene({triggerElement: "a#top", duration: 200, triggerHook: "onLeave"})
+      //-         .setTween(tween)
+      //-         .addIndicators() // add indicators (requires plugin)
+      //-         .addTo(controller);
+
+      // change behaviour of controller to animate scroll instead of jump
+      controller.scrollTo(function (newpos) {
+        TweenMax.to(window, 2.5, {scrollTo: {y: newpos}, force3D:true});
+      });
+
+      //  bind scroll to anchor links
+      $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+          e.preventDefault();
+
+          // trigger scroll
+          controller.scrollTo(id);
+
+            // if supported by the browser we can even update the URL.
+          if (window.history && window.history.pushState) {
+            history.pushState("", document.title, id);
+          }
+        }
+      });
         
